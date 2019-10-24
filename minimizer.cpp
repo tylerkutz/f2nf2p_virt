@@ -3,16 +3,19 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <ctype.h>
-#include <Eigen/Dense>
+//#include <Eigen/Dense>
 
 #include "spec.h"
 #include "constants.h"
+#include "F2.h"
 
-using Eigen::Vector2d;
+//using Eigen::Vector2d;
 using namespace std;
 
 // Initialize spectral function class
 spec * kaptari_sf = new spec();
+F2 * F2p = new F2(0);
+F2 * F2d = new F2(1);
 
 double offshell( double virt, double xB );
 const double offshell_a = 1;
@@ -28,14 +31,14 @@ const double f2p_d = -0.19;
 const double f2p_e = -2.93;
 const double f2p_f = -0.05;
 const double f2p_g = 3.65;
-double f2pf2d( double xB , double Q2 );
-double f2p( double xB, double Q2 );
+//double f2pf2d( double xB , double Q2 );
+//double f2p( double xB, double Q2 );
 
 // Main
 int main(int argc, char ** argv){
 
 	if (argc<2){
-		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [outputFile]\n";
+		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [compareF2p.txt] [compareF2d.txt]\n";
 		return -1;
 	}
 
@@ -44,9 +47,7 @@ int main(int argc, char ** argv){
 	int N = A-Z;
 	
 	// Loop over xB
-	ofstream outfile; outfile.open(argv[1]);
 	for( double x = 0.2; x <= 1. ; x+=0.01 ){
-	
 		// Spec functions for n/p in He-3
 		map<double,map<double,double>> test_n = kaptari_sf->getFullN();
 		map<double,map<double,double>> test_p = kaptari_sf->getFullP();
@@ -61,14 +62,7 @@ int main(int argc, char ** argv){
 			double p_m = itK_n->first/1000.;
 			for( itE_n = itK_n->second.begin(), itE_p = itK_p->second.begin(); itE_n != itK_n->second.end() && itE_p != itK_p->second.end(); itE_n++, itE_p++){
 				double E_m = itE_n->first/1000.;
-
-
-				double E_struck_proton 	= // left-over
-				double E_struck_neutron	= 
-
-
-
-				double v = (k*k + E*E - mN*mN);
+				double v = (p_m*p_m + E_m*E_m - mN*mN);
 				double sp_n = itE_n->second;
 				double sp_p = itE_p->second;
 				if( Z == 1 ){ // need to swap p/n for He-3 -> H-3 conversion and struck nucleons! TODO
@@ -80,7 +74,7 @@ int main(int argc, char ** argv){
 
 		}
 		
-		outfile << x << " " << (integral_p + integral_n) * f2pf2d(x, 14*x ) * (2./A) << "\n";
+		//outfile << x << " " << (integral_p + integral_n) * f2pf2d(x, 14*x ) * (2./A) << "\n";
 
 	}
 	outfile.close();
@@ -95,12 +89,16 @@ double f2nf2p( double xB ){
 	return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
 }
 
-double f2p( double xB, double Q2 ){
-	return (f2p_a*pow(x,f2p_b) + f2p_c*pow(x,f2p_d)*(1.+f2p_e*sqrt(x))*(log(Q2)+f2p_f*pow(log(Q2),2))) * pow(1.-x,f2p_g);
-}
+//double f2p( double xB, double Q2 ){
+//	return (f2p_a*pow(x,f2p_b) + f2p_c*pow(x,f2p_d)*(1.+f2p_e*sqrt(x))*(log(Q2)+f2p_f*pow(log(Q2),2))) * pow(1.-x,f2p_g);
+//}
 
 
 
+
+
+
+/*
 double f2pf2d( double xB , double Q2 ){
 	// Using Whitlow parameterization for the moment
 	Vector2d C1( 1.417, 0.948); 
@@ -130,3 +128,4 @@ double f2pf2d( double xB , double Q2 ){
 
 	return (beta[0]*F2_thr[0]*mult0)/(beta[1]*F2_thr[1]*mult1)/2.;
 }
+*/
