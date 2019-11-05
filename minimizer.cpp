@@ -38,13 +38,15 @@ const double f2p_g = 3.65;
 int main(int argc, char ** argv){
 
 	if (argc<2){
-		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [compareF2p.txt] [compareF2d.txt]\n";
+		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [OutputTextFile]\n";
 		return -1;
 	}
 
 	int A = 3;
 	int Z = 2;
 	int N = A-Z;
+	double Q2 = 10;
+	double dTheta = 0.01;
 	
 	// Loop over xB
 	for( double x = 0.2; x <= 1. ; x+=0.01 ){
@@ -56,34 +58,41 @@ int main(int argc, char ** argv){
 		map<double,map<double,double>>::iterator itK_p;
 		map<double,double>::iterator itE_n;
 		map<double,double>::iterator itE_p;
-		double integral_p = 0;
-		double integral_n = 0;
+
+		double integral = 0;
 		for( itK_n = test_n.begin(), itK_p = test_p.begin(); itK_n != test_n.end() && itK_p!= test_p.end(); itK_n++, itK_p++){
 			double p_m = itK_n->first/1000.;
 			for( itE_n = itK_n->second.begin(), itE_p = itK_p->second.begin(); itE_n != itK_n->second.end() && itE_p != itK_p->second.end(); itE_n++, itE_p++){
-				double E_m = itE_n->first/1000.;
-				double v = (p_m*p_m + E_m*E_m - mN*mN);
-				double sp_n = itE_n->second;
-				double sp_p = itE_p->second;
-				if( Z == 1 ){ // need to swap p/n for He-3 -> H-3 conversion and struck nucleons! TODO
-				}
-
-				integral_p += Z * sp_p * offshell(v,x);
-				integral_n += N * sp_n * offshell(v,x) * f2nf2p(x);
-			}
-
-		}
+				for( double theta = 0 ; theta <= M_PI ; theta += dTheta){
+					double E_m = itE_n->first/1000.;
+					double E_struck_n = mHe3 - sqrt(p_m*p_m + pow(E_m - mN + mHe3,2));
+					double E_struck_p = mHe3 - sqrt(p_m*p_m + pow(E_m - mP + mHe3,2));
+					
+					double v_n = ( pow(E_struck_n,2) - p_m*p_m - mN*mN  )/(mN*mN);
+					double v_p = ( pow(E_struck_p,2) - p_m*p_m - mP*mP  )/(mP*mP);
 		
-		//outfile << x << " " << (integral_p + integral_n) * f2pf2d(x, 14*x ) * (2./A) << "\n";
+					double alpha_n = (E_struck_n - p_m*cos(theta))/mN;
+					double alpha_p = (E_struck_p - p_m*cos(theta))/mP;
 
+					double sp_n = itE_n->second;
+					double sp_p = itE_p->second;
+					
+					integral += 2*M_PI * sin(theta) * dTheta *
+							( Z * sp_p + N * f2nf2p(x/alpha_p) * sp_n ) *
+							offshell(v_p,x/alpha_p) *
+							F2p->Eval(x/alpha_p, Q2);
+				}
+			}
+		}
+		cout << x << " " << integral << " " << integral / F2d->Eval(x,Q2) << "\n";
 	}
-	outfile.close();
+	//outfile.close();
 
 	return 0;
 }
 
 double offshell( double virt, double xB ){
-	return 1 ;//+ offshell_a*virt*virt;
+	return 1 ;
 }
 double f2nf2p( double xB ){
 	return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );

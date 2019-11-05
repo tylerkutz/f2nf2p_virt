@@ -20,6 +20,8 @@ void spec::fill_arrays(){
 	if (f_corr.is_open() == true){ 
 		while (!f_corr.eof()) { 
 			f_corr >> k >> E >> SF_p >> SF_n >> dk >> dE;
+			SF_p = SF_p / (4.*M_PI);
+			SF_n = SF_n / (4.*M_PI);
 			ks.push_back(k);
 			Es.push_back(E);
 			kSteps.push_back(dk);
