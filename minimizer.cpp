@@ -9,6 +9,10 @@
 #include "constants.h"
 #include "F2.h"
 
+#include "TFile.h"
+#include "TH2.h"
+#include "TTree.h"
+
 //using Eigen::Vector2d;
 using namespace std;
 
@@ -43,13 +47,31 @@ int main(int argc, char ** argv){
 	}
 
 	int A = 3;
-	int Z = 2;
+	int Z = 1;
 	int N = A-Z;
 	double Q2 = 10;
-	double dTheta = 0.01;
+	double dTheta = 0.05;
 	
+	TFile * outFile = new TFile("out.root","RECREATE");
+	TTree * outTree = new TTree("kin","kin");
+	double xB, q2, pmiss, Emiss, Estruck, Alpha, spec_p, p_F2, np_F2, Theta;
+	outTree->Branch("xB",		&xB);
+	outTree->Branch("Q2",		&q2);
+	outTree->Branch("p_m",		&pmiss);
+	outTree->Branch("E_m",		&Emiss);
+	outTree->Branch("theta",	&Theta);
+	outTree->Branch("E_s",		&Estruck);
+	outTree->Branch("alpha",	&Alpha);
+	outTree->Branch("sp_p",		&spec_p);
+	outTree->Branch("F2p",		&p_F2);
+	outTree->Branch("F2nF2p",	&np_F2);
+	TH2D * hEmPm = new TH2D("hEmPm","hEmPm",1000,0,5,1000,0,5);
+	TH1D * hCos  = new TH1D("hCos","hCos",500,-1,1);
+	
+	ofstream outfile;
+	outfile.open(argv[1]);
 	// Loop over xB
-	for( double x = 0.2; x <= 1. ; x+=0.01 ){
+	for( double x = 0.0; x <= 1. ; x+=0.005 ){
 		// Spec functions for n/p in He-3
 		map<double,map<double,double>> test_n = kaptari_sf->getFullN();
 		map<double,map<double,double>> test_p = kaptari_sf->getFullP();
@@ -63,36 +85,50 @@ int main(int argc, char ** argv){
 		for( itK_n = test_n.begin(), itK_p = test_p.begin(); itK_n != test_n.end() && itK_p!= test_p.end(); itK_n++, itK_p++){
 			double p_m = itK_n->first/1000.;
 			for( itE_n = itK_n->second.begin(), itE_p = itK_p->second.begin(); itE_n != itK_n->second.end() && itE_p != itK_p->second.end(); itE_n++, itE_p++){
+				double E_m = itE_n->first/1000.;
 				for( double theta = 0 ; theta <= M_PI ; theta += dTheta){
-					double E_m = itE_n->first/1000.;
-					double E_struck_n = mHe3 - sqrt(p_m*p_m + pow(E_m - mN + mHe3,2));
-					double E_struck_p = mHe3 - sqrt(p_m*p_m + pow(E_m - mP + mHe3,2));
 					
-					double v_n = ( pow(E_struck_n,2) - p_m*p_m - mN*mN  )/(mN*mN);
-					double v_p = ( pow(E_struck_p,2) - p_m*p_m - mP*mP  )/(mP*mP);
-		
-					double alpha_n = (E_struck_n - p_m*cos(theta))/mN;
-					double alpha_p = (E_struck_p - p_m*cos(theta))/mP;
+					// Convert from Kaptari E to initial E:
+					double E_i = mHe3 - sqrt( pow( mHe3 - mP + E_m , 2 ) + p_m*p_m  );
+					// Define alpha and nu from (E_i,p_i):
+					double alpha = (E_i - p_m*cos(theta) )/mP;
+					double nu = (E_i*E_i - p_m*p_m - mP*mP);
 
+					// Grab spectral function values:
 					double sp_n = itE_n->second;
 					double sp_p = itE_p->second;
+	
+
+					// Flag problematic kinematics:
+					if( x/alpha < 0 || x/alpha > 1 ){
+						outTree->Fill();
+						continue;
+					}
 					
-					integral += 2*M_PI * sin(theta) * dTheta *
-							( Z * sp_p + N * f2nf2p(x/alpha_p) * sp_n ) *
-							offshell(v_p,x/alpha_p) *
-							F2p->Eval(x/alpha_p, Q2);
+					double jacobian = (1./alpha) *sin(theta)
+								* (mHe3 - mP + E_m)
+								/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
+					double phi_int = 2*M_PI;
+					integral += jacobian * phi_int * dTheta 
+							* ( Z*sp_p + N*sp_n*f2nf2p(x/alpha) )
+							* offshell(nu,x/alpha)
+							* F2p->Eval(x/alpha, Q2 );	
+
 				}
 			}
 		}
-		cout << x << " " << integral << " " << integral / F2d->Eval(x,Q2) << "\n";
+		outfile << x << " " << integral << " " <<  (1./A)*integral / F2d->Eval(x,Q2) << "\n";
 	}
-	//outfile.close();
+	outfile.close();
+	outFile->cd();
+	outTree->Write();
+	outFile->Close();
 
 	return 0;
 }
 
 double offshell( double virt, double xB ){
-	return 1 ;
+	return 1;
 }
 double f2nf2p( double xB ){
 	return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );

@@ -1,0 +1,132 @@
+\documentclass{article}
+
+\usepackage{lineno,hyperref}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{subfigure}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{braket}
+\usepackage{hyperref}
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\newcommand{\squeezeup}{\vspace{-2.5mm}}
+
+\renewcommand{\baselinestretch}{1.15} 
+
+\setlength{\parindent}{0cm}
+
+
+
+%\title{This is a specimen title\tnoteref{t1,t2}}
+\title{Notes on $F_2^n/F_2^p$ -- Offshell Modification}
+%% Group authors per affiliation:
+\author{Written by Efrain Segarra \\\\}
+\date{}
+\begin{document}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Method of extraction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\Large{Method}}
+We would like to demonstrate the ability to constrain $F_2^n/F_2^p$ by utilizing $A=3$ nuclei within a model that 
+accounts for nuclear effects such as binding, fermi-motion, and offshellness:
+
+\begin{eqnarray}
+	\centering
+	\begin{split}
+		F_2^A(x,Q^2) &= \int_x^A \frac{d\alpha d^3{\bf{p}}}{\alpha} \Big[ 
+			Z F_2^p (\frac{x}{\alpha},Q^2)  \rho_p^A(\alpha,{\bf{p}}) \mathcal{O}_p(\frac{x}{\alpha},\nu) + 
+			N F_2^n(\frac{x}{\alpha},Q^2) \rho_n^A(\alpha,{\bf{p}})\mathcal{O}_n(\frac{x}{\alpha},\nu) 
+		\Big]																			\\
+					&= \int_x^A \frac{d\alpha d^3{\bf{p}}}{\alpha} \ F_2^p(\frac{x}{\alpha},Q^2) \Big[
+					Z \rho_p^A(\alpha,{\bf{p}}) + N \rho_n^A(\alpha,{\bf{p}}) \frac{F_2^n(\frac{x}{\alpha},Q^2)}{F_2^p(\frac{x}{\alpha},Q^2)}
+					\Big]  \mathcal{O}(\frac{x}{\alpha},\nu)
+	\end{split}
+\end{eqnarray}
+
+where $F_2^p$ ($F_2^n$) are the free proton (neutron) structure functions, $\mathcal{O}(\frac{x}{\alpha},\nu)$ describes offshell nucleon modification 
+(which we assume to be the same for neutrons and protons, and the same for all nuclei), and $\rho_p^A(\alpha,{\bf{p}})$ ($\rho_n^A(\alpha,{\bf{p}})$) are the 
+nucleon light-cone momentum distributions for protons (neutrons) in nucleus A. \\
+
+Then, we can constrain parameters that describe $F_2^n/F_2^p$ and $ \mathcal{O}(\frac{x}{\alpha},\nu)$ by calculating $F_2^A(x,Q^2)$ and comparing to 
+experimental data. Ideally, we would like to show that when only considering $^3$He, extracting $F_2^n/F_2^p$ is highly correlated with 
+$ \mathcal{O}(\frac{x}{\alpha},\nu)$, and when using the leverage gained by  $^3$H, one say something, highlighting the need for the MARATHON data. In this 
+case, we are using a model for $\rho_{(p,n)}^A(\alpha,{\bf{p}})$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Eqns in use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\Large{Details}}
+Since we have spectral functions for $^3$He readily available, we can start out with these non-relativistic distributions before utilizing light-cone distributions. 
+However, these objects are in terms of (${\bf{p}},E$), not ($\alpha,\nu$). The $E$ that we are given in the Kaptari spectral function is defined as:
+\begin{eqnarray}
+	\centering
+	\begin{split}				
+		E &= \sqrt{P_{A-1}^2} + m_N - m_A						\\
+		E &= (m_{A-1}^*) + m_N - m_A							\\
+		& \rightarrow (m_{A-1}^*) = E + m_A - m_N				\\
+	\end{split}
+\end{eqnarray}
+and a PWIA framework is used, so that ${\bf{p}} = {\bf{p_{A-1}}}$.\\
+
+
+Thus, given (${\bf{p}},E$), we can relate this to $\nu$:
+\begin{eqnarray}
+	\centering
+	\begin{split}	
+		\nu &= P^2 - m_N^2 = (P_A - P_{A-1})^2 - m_N^2											\\
+		      &= \Big[(m_A - E_{A-1})^2 - {\bf{p}}^2\Big] - m_N^2										\\
+		      &= \Big[\left(m_A - \sqrt{m_{A-1}^{*2} + {\bf{p}}_{A-1}^2} \right)^2 - {\bf{p}}^2\Big] - m_N^2			\\
+		      &= \Big[\left(m_A - \sqrt{\left(m_A-m_N+E\right)^2 + {\bf{p}}^2} \right)^2 - {\bf{p}}^2\Big] - m_N^2
+	\end{split}
+\end{eqnarray}
+
+and similarly for $\alpha$:
+\begin{eqnarray}
+	\centering
+	\begin{split}	
+		\alpha &= \frac{E_i - |{\bf{p}}| \cos{\theta}}{m_N}													\\
+		      	   &= \frac{(m_A-E_{A-1}) - |{\bf{p}}|\cos{\theta}}{m_N}											\\
+			   &=	\frac{ \left( m_A - \sqrt{m_{A-1}^{2*} + {\bf{p}}^2} \right) - |{\bf{p}}|\cos{\theta} }{ m_N }					\\
+			   &=	\frac{ \left( m_A - \sqrt{\left(m_A-m_N+E\right)^{2} + {\bf{p}}^2} \right) - |{\bf{p}}|\cos{\theta} }{ m_N }		\\
+	\end{split}
+\end{eqnarray}
+
+We also have to evaluate a Jacobian to go from $d\alpha d^3 {\bf{p}} \rightarrow dE d\theta d\phi dp$:
+\begin{eqnarray}
+	\centering
+	\begin{split}	
+		\frac{d\alpha d^3 {\bf{p}}}{\alpha} &= \frac{1}{\alpha} \mathcal{J} dE d\theta d\phi dp					\\
+		\frac{d\alpha d^3 {\bf{p}}}{\alpha} &= \frac{1}{\alpha}  \left[ \frac{{\bf{p}}^2 \sin{\theta} \left( m_A - m_N + E\right) }{ m_N \sqrt{ \left( m_A - m_N + E \right)^2 + {\bf{p}^2} }  } \right]dE d\theta d\phi dp
+	\end{split}
+\end{eqnarray}
+
+Our evaluation of the integral for estimating $F_2^A(x,Q^2)$ is now as follows:
+\begin{eqnarray}
+	\centering
+	\begin{split}
+		F_2^A(x,Q^2)  = \frac{2\pi}{A} \ & \sum_{i=0}^{i_{end}}  \Delta E  \sum_{j=0}^{j_{end}}  \Delta p  \sum_{k=0}^{k_{end}} \Delta \theta \  
+				\frac{1}{\alpha}  \left[ \frac{{\bf{p_j}}^2 \sin{\theta} \left( m_A - m_N + E_i\right) }{ m_N \sqrt{ \left( m_A - m_N + E_i \right)^2 + {\bf{p_j}^2} }  } \right] 	\\
+				\cdot & \left[ Z S_p^A({\bf{p_j}},E_i)   + N S_n^A({\bf{p_j}},E_i) \frac{F_2^n(\frac{x}{\alpha},Q^2)}{F_2^p(\frac{x}{\alpha},Q^2)}  \right] \cdot F_2^p(\frac{x}{\alpha},Q^2) \mathcal{O}
+			(\frac{x}{\alpha},\nu)			\\ \\
+		\alpha &= 	\frac{ \left( m_A - \sqrt{\left(m_A-m_N+E_i\right)^{2} + {\bf{p_j}}^2} \right) - |{\bf{p_j}}|\cos{\theta_k} }{ m_N } \\ \\
+		\nu &= \Big[\left(m_A - \sqrt{\left(m_A-m_N+E_i\right)^2 + {\bf{p_j}}^2} \right)^2 - {\bf{p_j}}^2\Big] - m_N^2
+	\end{split}
+\end{eqnarray}
+where $\Delta E, \Delta p , E_{0}, E_{end}, p_{0}, p_{end}$ are determined by the discretization of the spectral function calculation, $\Delta \theta$ we choose 
+weighing efficiency/accuracy, $\theta_{end}=\pi$, $S_{(p,n)}^A({\bf{p_j}},E_i)$ are the given spectral function calculations for nucleons in given nucleus $A$. I implemented
+the $F_2^p(x,Q^2)$ parameterization from ALLM (see \href{https://arxiv.org/abs/hep-ph/9712415v2}{here}) and checked that it sufficiently described world data (see 
+\href{https://arxiv.org/abs/1103.5704v2}{here}). I parameterize $\frac{F_2^n(\frac{x}{\alpha},Q^2)}{F_2^p(\frac{x}{\alpha},Q^2)} = \alpha + \beta x + \gamma e^{\delta(1-x)}$ 
+with $\alpha,\beta,\gamma,\delta$ to be minimized and initial parameter guesses from fitting this form to the $F_2^n/F_2^p$ I extracted from nuclear DIS data. Finally, I take a
+simple paramterization of the off-shell modification to be $\mathcal{O} (\frac{x}{\alpha},\nu) = \nu^2 + \epsilon$, with $\epsilon$ to be minimized.
+
+\end{document}
