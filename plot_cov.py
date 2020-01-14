@@ -111,7 +111,7 @@ plt.savefig("correlation.pdf")
 
 
 
-fig2, ax2 = plt.subplots(1, 3, figsize=(19, 11))
+fig2, ax2 = plt.subplots(1, 4, figsize=(19, 11))
 
 cov_he3_h3_abc_o = cov_he3_h3[0][4] + cov_he3_h3[1][4] + cov_he3_h3[2][4]
 cov_he3_h3_o_abc = cov_he3_h3[4][0] + cov_he3_h3[4][1] + cov_he3_h3[4][2]
@@ -138,12 +138,19 @@ ax2[0].set_title("He3 and H3 - Pearson R: %.2f" % np.round(pear,2) )
 [x,y,pear] = confidence_ellipse(new_cov_h3, min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2] , min_pars_h3[-1] , ax2[1] , edgecolor='blue')
 ax2[1].set_xlim((min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2])-1.5*x,(min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2])+1.5*x)
 ax2[1].set_ylim(min_pars_h3[-1]-1.5*y,min_pars_h3[-1]+1.5*y)
-ax2[1].set_title("H3 - Pearson R: %.2f" % np.round(pear,2) )
+ax2[1].set_title("He3 - Pearson R: %.2f" % np.round(pear,2) )
 
 [x1,y1,pear1] = confidence_ellipse(new_cov_he3_h3, 0,0 , ax2[2] , edgecolor='red')
 [x2,y2,pear2] = confidence_ellipse(new_cov_h3, 0,0 , ax2[2] , edgecolor='blue')
 ax2[2].set_xlim(-max(x1,x2)*1.5,max(x1,x2)*1.5)
 ax2[2].set_ylim(-max(y1,y2)*1.5,max(y1,y2)*1.5)
+
+[x1,y1,pear1] = confidence_ellipse(new_cov_he3_h3, min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2] , min_pars_he3_h3[-1] , ax2[3] , edgecolor='red')
+[x2,y2,pear2] = confidence_ellipse(new_cov_h3, min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2] , min_pars_h3[-1] , ax2[3] , edgecolor='blue')
+ax2[3].set_xlim(0.1,0.65)
+ax2[3].set_ylim(-3.5,4)
+ax2[3].set_xlabel("F2n/F2p at x=1")
+ax2[3].set_ylabel("Offshell par a")
 
 
 plt.savefig("before-after.pdf")
