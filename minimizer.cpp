@@ -59,24 +59,59 @@ double Chi2( const double *pars );
 // Main
 int main(int argc, char ** argv){
 
-	if (argc<2){
+	if( argc < 2 ){
 		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [OutputTextFile]\n";
 		return -1;
 	}
 
+	//if( argc < 3 ){
+	//	cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [OutputTextFile] [InputParams]\n";
+	//	return -1;
+	//}
+	//double np_a = 0;
+	//double np_b = 0;
+	//double np_c = 0;
+	//double np_d = 0;
+	//double of_a = 0;
+	//ifstream f; f.open(argv[2]);
+	//while(!f.eof()){
+	//	f >> np_a;
+	//	f >> np_b;
+	//	f >> np_c;
+	//	f >> np_d;
+	//	f >> of_a;
+	//}
+	//if( np_a == 0 && np_b == 0 && np_c == 0 && np_d == 0 && of_a == 0 ){
+	//	cerr << "Couldn't load input parameters... exiting...\n";
+	//	return -2;
+	//}
+
 	// Starting parameters
+	// 	OG
 	const double np_a = -1.21721713;
 	const double np_b = 0.8622478;
 	const double np_c = 0.82047886;
 	const double np_d = 0.96399233;
 	const double of_a = 0.;
+	//	He-3 results from offshell+n/p minimization
+	//const double np_a      = -1.28977; 
+	//const double np_b      = 0.791046; 
+	//const double np_c      = 0.777979; 
+	//const double np_d      = 0.905046; 
+	//const double of_a      = 1.50513;
+	//	H-3 results from offshell+n/p minimization 
+	//const double np_a      = -1.07099;
+	//const double np_b      = 0.481792;
+	//const double np_c      = 0.876975;
+	//const double np_d      = 0.704521;
+	//const double of_a      = 2.95809;
+
 
 	readData();
 
 	ROOT::Math::Minimizer* min = ROOT::Math::Factory::CreateMinimizer("Minuit2","MIGRAD");
 	min->SetMaxFunctionCalls(100000);
-	//min->SetTolerance(0.5);
-	min->SetTolerance(5);
+	min->SetTolerance(0.5);
 	min->SetPrintLevel(1);
 
 	ROOT::Math::Functor f(&Chi2,5);
@@ -86,10 +121,8 @@ int main(int argc, char ** argv){
 	min->SetVariable(2,	"np_c",	np_c, 	0.1	);
 	min->SetVariable(3,	"np_d",	np_d, 	0.1	);
 	min->SetVariable(4,	"of_a",	of_a, 	0.1	);
+	min->FixVariable(4);
 	min->Minimize();
-
-	//double covar[] = {0.};
-	//min->GetCovMatrix(covar);
 
 	// Print covar result:
 	ofstream outfile;
@@ -98,11 +131,6 @@ int main(int argc, char ** argv){
 	outfile 	<< "\n************ Fit covar results *************\n";
 	cerr 		<< "\t\t [ i*ndim + j ] \n";
 	outfile 	<< "\t\t [ i*ndim + j ] \n";
-	//for( auto i : covar ){
-	//	auto val = i;
-	//	cerr 	<< val << "\n";
-	//	outfile << val << "\n";
-	//}
 	for( int i = 0 ; i < 5 ; i++ ){
 		for( int j = 0 ; j < 5 ; j++){
 			cerr << min->CovMatrix(i,j) << "\n";
@@ -114,19 +142,6 @@ int main(int argc, char ** argv){
 	outfile.close();
 	delete min;
 
-	/*
-	int second = sizeof(covar[0]);
-	cout << second << std::endl;
-	int manual = first/second;
-	cout << manual << std::endl;
-	for( int i = 0 ; i < size ; i ++ ){
-		double val = covar[i];
-		cout << val << "\n";
-	}
-	//for( int i = 0 ; i < size ; i++ ){
-	//	cout << covar[i] << "\n";
-	//}
-	*/
 	return 0;
 }
 

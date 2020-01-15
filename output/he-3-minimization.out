@@ -1,0 +1,2184 @@
+Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strategy 1
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		933.423
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21572
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		950.913
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21871
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		916.102
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21707
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		935.164
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21737
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		931.683
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.86374
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		940.621
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.860755
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		926.262
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862412
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		934.211
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862084
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		932.636
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.821971
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		964.767
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.818986
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		902.61
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820628
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		936.534
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.82033
+		np_d: 0.963992
+		of_a: 0
+	Current chi2:
+		930.318
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.965485
+		of_a: 0
+	Current chi2:
+		949.18
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.9625
+		of_a: 0
+	Current chi2:
+		917.829
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.964142
+		of_a: 0
+	Current chi2:
+		934.991
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963843
+		of_a: 0
+	Current chi2:
+		931.856
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: 0.00149259
+	Current chi2:
+		934.343
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.21722
+		np_b: 0.862248
+		np_c: 0.820479
+		np_d: 0.963992
+		of_a: -0.00149259
+	Current chi2:
+		932.503
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.3715
+		np_b: 0.572872
+		np_c: 0.733045
+		np_d: 0.820247
+		of_a: -2.7989
+	Current chi2:
+		9171.02
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7501
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25579
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7269
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25582
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7733
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789903
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7228
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.78983
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7774
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798624
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7188
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798594
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7814
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798619
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.729
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798599
+		np_d: 0.928037
+		of_a: -0.700086
+	Current chi2:
+		45.7713
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928055
+		of_a: -0.700086
+	Current chi2:
+		45.7355
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.92802
+		of_a: -0.700086
+	Current chi2:
+		45.7647
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.699767
+	Current chi2:
+		45.7254
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25581
+		np_b: 0.789867
+		np_c: 0.798609
+		np_d: 0.928037
+		of_a: -0.700404
+	Current chi2:
+		45.7748
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25174
+		np_b: 0.807635
+		np_c: 0.799728
+		np_d: 0.927154
+		of_a: -0.600621
+	Current chi2:
+		29.7936
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.5
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25108
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.5024
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2511
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.4977
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810479
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.4988
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810419
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.5012
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799914
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.5036
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799898
+		np_d: 0.927014
+		of_a: -0.584866
+	Current chi2:
+		29.4965
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.92703
+		of_a: -0.584866
+	Current chi2:
+		29.505
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.926998
+		of_a: -0.584866
+	Current chi2:
+		29.495
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.584589
+	Current chi2:
+		29.4998
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25109
+		np_b: 0.810449
+		np_c: 0.799906
+		np_d: 0.927014
+		of_a: -0.585142
+	Current chi2:
+		29.5003
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2517
+		np_b: 0.816602
+		np_c: 0.798891
+		np_d: 0.923854
+		of_a: -0.549773
+	Current chi2:
+		27.9128
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.896
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25348
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8964
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25351
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8955
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834779
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8967
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834723
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8952
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795906
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8961
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795891
+		np_d: 0.914535
+		of_a: -0.446263
+	Current chi2:
+		25.8958
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914549
+		of_a: -0.446263
+	Current chi2:
+		25.8954
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.91452
+		of_a: -0.446263
+	Current chi2:
+		25.8966
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446005
+	Current chi2:
+		25.8939
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25349
+		np_b: 0.834751
+		np_c: 0.795898
+		np_d: 0.914535
+		of_a: -0.446521
+	Current chi2:
+		25.898
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25425
+		np_b: 0.834071
+		np_c: 0.795502
+		np_d: 0.914235
+		of_a: -0.406107
+	Current chi2:
+		25.5478
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.25726
+		np_b: 0.831353
+		np_c: 0.793919
+		np_d: 0.913037
+		of_a: -0.245482
+	Current chi2:
+		24.2417
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.26479
+		np_b: 0.824559
+		np_c: 0.78996
+		np_d: 0.910042
+		of_a: 0.156082
+	Current chi2:
+		21.5532
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1484
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28559
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1474
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28561
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1493
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.805814
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1487
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.805767
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1481
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779033
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1469
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.77902
+		np_d: 0.901769
+		of_a: 1.26523
+	Current chi2:
+		18.1498
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901782
+		of_a: 1.26523
+	Current chi2:
+		18.1462
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901756
+		of_a: 1.26523
+	Current chi2:
+		18.1505
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26545
+	Current chi2:
+		18.1472
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2856
+		np_b: 0.80579
+		np_c: 0.779027
+		np_d: 0.901769
+		of_a: 1.26501
+	Current chi2:
+		18.1495
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.2886
+		np_b: 0.79261
+		np_c: 0.778534
+		np_d: 0.905182
+		of_a: 1.43103
+	Current chi2:
+		17.4666
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4602
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28891
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4599
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28893
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4605
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.79121
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4599
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791165
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4606
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778487
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.46
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778475
+		np_d: 0.90555
+		of_a: 1.44892
+	Current chi2:
+		17.4605
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.905562
+		of_a: 1.44892
+	Current chi2:
+		17.46
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.905538
+		of_a: 1.44892
+	Current chi2:
+		17.4604
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44915
+	Current chi2:
+		17.4599
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28892
+		np_b: 0.791187
+		np_c: 0.778481
+		np_d: 0.90555
+		of_a: 1.44869
+	Current chi2:
+		17.4606
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28955
+		np_b: 0.791083
+		np_c: 0.778109
+		np_d: 0.905177
+		of_a: 1.49052
+	Current chi2:
+		17.4467
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28978
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791069
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791024
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777985
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777973
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905058
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905034
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.5049
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28978
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791069
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791024
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777985
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777973
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905058
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905034
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.5049
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791051
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791042
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.77798
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777978
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905048
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905043
+		of_a: 1.50513
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50517
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50508
+	Current chi2:
+		17.4457
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791069
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791046
+		np_c: 0.777985
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905058
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28976
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791069
+		np_c: 0.777985
+		np_d: 0.905046
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791069
+		np_c: 0.777979
+		np_d: 0.905058
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791069
+		np_c: 0.777979
+		np_d: 0.905046
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777985
+		np_d: 0.905058
+		of_a: 1.50513
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777985
+		np_d: 0.905046
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: -1.28977
+		np_b: 0.791046
+		np_c: 0.777979
+		np_d: 0.905058
+		of_a: 1.50535
+	Current chi2:
+		17.4458
+**********************************************
+
+Info in <Minuit2>: matrix forced pos-def by adding to diagonal : padd = 0.00469269
+Info in <Minuit2>: MnHesse: matrix was forced pos. def. 
+Info in <Minuit2>: Minuit2Minimizer::Minimize : Covar was made pos def
+Minuit2Minimizer : Valid minimum - status = 1
+FVAL  = 17.4457367084863186
+Edm   = 0.000384380042600187513
+Nfcn  = 126
+np_a	  = -1.28977	 +/-  0.060147
+np_b	  = 0.791046	 +/-  0.0771138
+np_c	  = 0.777979	 +/-  0.0349043
+np_d	  = 0.905046	 +/-  0.0540317
+of_a	  = 1.50513	 +/-  0.671659
+
+************ Fit covar results *************
+		 [ i*ndim + j ] 
+0.00361767
+-0.00322668
+-0.000827655
+-0.00107139
+0.000637694
+-0.00322668
+0.00594654
+-0.000580789
+0.00344904
+-0.023418
+-0.000827655
+-0.000580789
+0.00121831
+-0.00123923
+-0.000152136
+-0.00107139
+0.00344904
+-0.00123923
+0.00291942
+-0.013515
+0.000637694
+-0.023418
+-0.000152136
+-0.013515
+0.451125
+**********************************************

@@ -44,14 +44,22 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 int main(int argc, char ** argv){
 
 	if (argc<2){
-		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./minimizer [OutputTextFile]\n";
+		cerr << "Wrong number of arguments used.\n\tPlease instead use: ./code [OutputTextFile]\n";
 		return -1;
 	}
-
-	// Result from He3 and H3 simultaneous fit:
-	//const double pars[5] = {-1.49198,1.35858,0.694808,1.29278,-2.56522};
-	// Result from only He3 fit:
-	const double pars[5] = {-1.28977,0.791046,0.777979,0.905046,1.50513};
+	
+	// He-3 + H-3 with offshell and np starting from init
+	const double pars[5] = {-1.49198,1.35858,0.694808,1.29278,-2.56522};
+	// He-3 only with offshell and np starting from init
+	//const double pars[5] = {-1.28977,0.791046,0.777979,0.905046,1.50513};
+	// H-3 ony with offshell and np starting from init
+	//const double pars[5] = {-1.07099,0.481792,0.876975,0.704521,2.95809};
+	// He-3 only with fixed offshell starting from init				-- DONE
+	//const double pars[5] = {-2.97006,1.81705,1.58944,0.862649,0};
+	// H-3 ony with fixed offshell starting from init
+	//const double pars[5] = {-1.29765,0.933887,0.78149,1.01652,0};
+	// He-3 and H-3 with fixed offshell and startiing from init
+	//const double pars[5] = {-1.32074,0.970307,0.770459,1.03452,0};
 
 	ofstream outfile;
 	outfile.open(argv[1]);
