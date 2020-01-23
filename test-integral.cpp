@@ -34,7 +34,7 @@ map<double,double>::iterator itE_p;
 
 // Functions with parameters to be minimized
 double offshell( double virt, double xB , double off_a );
-double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c, double f2nf2p_d );
+double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to create theory point
 void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const double *pars);
@@ -49,7 +49,7 @@ int main(int argc, char ** argv){
 	}
 	
 	// He-3 + H-3 with offshell and np starting from init
-	const double pars[5] = {-1.49198,1.35858,0.694808,1.29278,-2.56522};
+	//const double pars[5] = {-1.49198,1.35858,0.694808,1.29278,-2.56522};
 	// He-3 only with offshell and np starting from init
 	//const double pars[5] = {-1.28977,0.791046,0.777979,0.905046,1.50513};
 	// H-3 ony with offshell and np starting from init
@@ -60,6 +60,13 @@ int main(int argc, char ** argv){
 	//const double pars[5] = {-1.29765,0.933887,0.78149,1.01652,0};
 	// He-3 and H-3 with fixed offshell and startiing from init
 	//const double pars[5] = {-1.32074,0.970307,0.770459,1.03452,0};
+	
+	// He-3 + H-3 with offshell and np starting with new param and norm err from init
+	//const double pars[6] = {0.439694,2.6614,0.378713,0.415886,0.970452,1.0135};
+	// H-3 with offshell and np starting with new param and norm err from init
+	//const double pars[6] = {0.394644,1.87921,0.315853,2.59768,1,0.999951};
+	// He-3 with offshell and np starting with new param and norm err from init
+	const double pars[6] = {0.34658,2.3002,0.246982,1.82858,1.00002,1};
 
 	ofstream outfile;
 	outfile.open(argv[1]);
@@ -80,8 +87,12 @@ int main(int argc, char ** argv){
 double offshell( double virt, double xB , double off_a ){
 	return 1 + off_a*virt*virt;
 }
-double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c, double f2nf2p_d ){
-	return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
+//double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c, double f2nf2p_d ){
+//	return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
+//}
+double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c ){
+	//return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
+	return f2nf2p_a * pow( 1.-xB , f2nf2p_b ) + f2nf2p_c;	// -- simpler parameterization so that x=1 is just 1 parameter
 }
 
 
@@ -121,14 +132,16 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are
 				theo_he3 += jacobian * phi_int * dTheta 
-					* ( Z*sp_p + N*sp_n*f2nf2p(x/alpha,pars[0],pars[1],pars[2],pars[3]) )
-					* offshell(nu,x/alpha,pars[4])
-					* F2p->Eval(x/alpha, Q2 );	
+					* ( Z*sp_p + N*sp_n*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* offshell(nu,x/alpha,pars[3])
+					* F2p->Eval(x/alpha, Q2 )
+					* pars[4];	
 				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n
 				theo_h3 += jacobian * phi_int * dTheta 
-					* ( Z*sp_n + N*sp_p*f2nf2p(x/alpha,pars[0],pars[1],pars[2],pars[3]) )
-					* offshell(nu,x/alpha,pars[4])
-					* F2p->Eval(x/alpha, Q2 );	
+					* ( Z*sp_n + N*sp_p*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* offshell(nu,x/alpha,pars[3])
+					* F2p->Eval(x/alpha, Q2 )
+					* pars[5];	
 
 			}// end loop over theta
 		}// end loop over E miss

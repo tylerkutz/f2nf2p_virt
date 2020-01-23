@@ -133,6 +133,7 @@ int main(int argc, char ** argv){
 	min->SetVariable(3,	"of_a",	of_a, 	0.1	);
 	min->SetVariable(4,	"N_he3",Nhe3,   0.1	);
 	min->SetVariable(5,	"N_h3",	Nh3,    0.1	);
+	min->FixVariable(5);
 	min->Minimize();
 
 	// Print covar result:
@@ -257,8 +258,8 @@ double Chi2( const double *pars ){
 		// Calculate chi2:
 		chi2 += 	pow(	(data_he3[i] - pars[4]*theo_he3) /data_he3_er[i]	, 2 );
 		chi2 +=		pow(	(pars[4] - 1.)/0.05	, 2 );	// He-3 normalization 
-		chi2 += 	pow(	(data_h3[i]  - pars[5]*theo_h3)  /data_h3_er[i]	, 2 );
-		chi2 += 	pow(	(pars[5] - 1.)/0.05	, 2 );  // H-3 normalization
+		//chi2 += 	pow(	(data_h3[i]  - pars[5]*theo_h3)  /data_h3_er[i]	, 2 );
+		//chi2 += 	pow(	(pars[5] - 1.)/0.05	, 2 );  // H-3 normalization
 
 		// Add penalty for n/p(x=1) > SU(6) or n/p(x=1) < scalar diquark
 		//if( (par[0] + par[1] + par[2]) < 0 ) chi2 += 0.1*exp(chi2);	// hard penalty

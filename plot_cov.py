@@ -54,7 +54,7 @@ with open("build/test-he3-h3.txt","rb") as f:
 		val = float(line.strip())
 		arr.append(val)
 		ctr2+=1
-		if ctr2 == 5:
+		if ctr2 == 6:
 			ctr2 = 0
 			ctr1 += 1
 			cov_he3_h3.append(arr)
@@ -65,7 +65,7 @@ with open("build/test-no-h3.txt","rb") as f:
 		val = float(line.strip())
 		arr.append(val)
 		ctr2+=1
-		if ctr2 == 5:
+		if ctr2 == 6:
 			ctr2 = 0
 			ctr1 += 1
 			cov_h3.append(arr)

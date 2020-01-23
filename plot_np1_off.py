@@ -57,7 +57,7 @@ for fi in sys.argv[1:4]:
 			val = float(line.strip())
 			arr.append(val)
 			ctr2+=1
-			if ctr2 == 5:
+			if ctr2 == 6:
 				ctr2 = 0
 				ctr1 += 1
 				cov.append(arr)
@@ -71,16 +71,22 @@ for fi in sys.argv[4:]:
 	np_a = 0;
 	np_b = 0;
 	np_c = 0;
-	np_d = 0;
+	#np_d = 0;
 	of_a = 0;
+	N_he3 = 0;
+	N_h3 = 0;
 	with open(fi,"rb") as f:
 		for line in f:
 			if 'np_a' in line and "+/-" in line: np_a = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
-			if 'np_d' in line and "+/-" in line: np_d = float(line.strip().split("=")[-1].split("+/-")[0])
+			#if 'np_d' in line and "+/-" in line: np_d = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
-	PARs.append( [ np_a, np_b, np_c, np_d, of_a ] )
+			if 'N_he3'in line and "+/-" in line: N_he3= float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'N_h3' in line and "+/-" in line: N_h3 = float(line.strip().split("=")[-1].split("+/-")[0])
+			
+	#PARs.append( [ np_a, np_b, np_c, np_d, of_a ] )
+	PARs.append( [ np_a, np_b, np_c, of_a , N_he3 , N_h3 ] )
 
 
 print PARs
@@ -93,24 +99,35 @@ labs = ['He-3 and H-3','H-3','He-3']
 y_min = 1e4; x_min = 1e4;
 y_max = -1e4; x_max = -1e4;
 for cov in COVs:
-	cov_abc_o = cov[0][4] + cov[1][4] + cov[2][4]
-	cov_o_abc = cov[4][0] + cov[4][1] + cov[4][2]
-	cov_abc_abc = 0
-	for i in range(3):
-		cov_abc_abc += (cov[i][0] +cov[i][1] + cov[i][2] )
-	cov_o_o = cov[4][4]
-	new_cov = np.asarray([	[cov_abc_abc,cov_abc_o],[cov_o_abc,cov_o_o] ])
-	
-	x = PARs[ii][0]+PARs[ii][1]+PARs[ii][2]
-	y = PARs[ii][4]
+	#cov_abc_o = cov[0][4] + cov[1][4] + cov[2][4]
+	#cov_o_abc = cov[4][0] + cov[4][1] + cov[4][2]
+	#cov_abc_abc = 0
+	#for i in range(3):
+	#	cov_abc_abc += (cov[i][0] +cov[i][1] + cov[i][2] )
+	#cov_o_o = cov[4][4]
+	#new_cov = np.asarray([	[cov_abc_abc,cov_abc_o],[cov_o_abc,cov_o_o] ])
+	#x = PARs[ii][0]+PARs[ii][1]+PARs[ii][2]
+	#y = PARs[ii][4]
+	cov_c_c = cov[2][2]
+	cov_c_o = cov[2][3]
+	cov_o_c = cov[3][2]
+	cov_o_o = cov[3][3]
+	new_cov = np.asarray([ [cov_c_c,cov_c_o],[cov_o_c,cov_o_o] ])	
+	x = PARs[ii][2]
+	y = PARs[ii][3]
+
 	[tm,tm,pear] = confidence_ellipse(new_cov, x , y , ax ,n_std=1, edgecolor=cols[ii],linewidth=3)
 	[tm,tm,pear] = confidence_ellipse(new_cov, x , y , ax ,n_std=2, edgecolor=cols[ii],linewidth=3)
 	[x,y,pear] = confidence_ellipse(new_cov, x , y , ax ,n_std=3, edgecolor=cols[ii],linewidth=3,label=labs[ii])
 
-	if x_min > (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) - x	: x_min = (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) - x*1.5
-	if y_min > (PARs[ii][4]) - y				: y_min = (PARs[ii][4]) - y*1.5
-	if x_max < (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) + x 	: x_max = (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) + x*1.5
-	if y_max < (PARs[ii][4]) + y				: y_max = (PARs[ii][4]) + y*1.5
+	#if x_min > (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) - x	: x_min = (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) - x*1.5
+	#if y_min > (PARs[ii][4]) - y				: y_min = (PARs[ii][4]) - y*1.5
+	#if x_max < (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) + x 	: x_max = (PARs[ii][0]+PARs[ii][1]+PARs[ii][2]) + x*1.5
+	#if y_max < (PARs[ii][4]) + y				: y_max = (PARs[ii][4]) + y*1.5
+	if x_min > (PARs[ii][2]) - x	: x_min = (PARs[ii][2]) - x*1.5
+	if y_min > (PARs[ii][3]) - y	: y_min = (PARs[ii][3]) - y*1.5
+	if x_max < (PARs[ii][2]) + x 	: x_max = (PARs[ii][2]) + x*1.5
+	if y_max < (PARs[ii][3]) + y	: y_max = (PARs[ii][3]) + y*1.5
 	ii+=1
 
 ax.set_ylim(y_min,y_max)
