@@ -88,12 +88,13 @@ int main(int argc, char ** argv){
 	
 	// New parameters from new param of F2n/F2p
 	// 	OG
-	const double np_a = 0.46500111;
-	const double np_b = 2.68513156;
-	const double np_c = 0.47170629;
-	const double of_a = 0.;
-	const double Nhe3 = 1.;
-	const double Nh3 = 1.;
+	const double np_a 	= 0.46500111;
+	const double np_b 	= 2.68513156;
+	const double np_c 	= 0.47170629;
+	const double of_p 	= 0.;
+	const double of_n 	= 0.;
+	const double Nhe3 	= 1.;
+	const double Nh3 	= 1.;
 
 	// Starting parameters
 	// 	OG
@@ -127,13 +128,13 @@ int main(int argc, char ** argv){
 
 	ROOT::Math::Functor f(&Chi2,6);
 	min->SetFunction(f);
-	min->SetVariable(0,	"np_a",	np_a, 	0.1	);
-	min->SetVariable(1,	"np_b",	np_b, 	0.1	);
-	min->SetVariable(2,	"np_c",	np_c, 	0.1	);
-	min->SetVariable(3,	"of_a",	of_a, 	0.1	);
-	min->SetVariable(4,	"N_he3",Nhe3,   0.1	);
-	min->SetVariable(5,	"N_h3",	Nh3,    0.1	);
-	min->FixVariable(5);
+	min->SetVariable(0,	"np_a",		np_a, 		0.1	);
+	min->SetVariable(1,	"np_b",		np_b, 		0.1	);
+	min->SetVariable(2,	"np_c",		np_c, 		0.1	);
+	min->SetVariable(3,	"of_p",		of_p, 		0.1	);
+	min->SetVariable(4,	"of_n",		of_n, 		0.1	);
+	min->SetVariable(5,	"N_he3",	Nhe3,   	0.1	);
+	min->SetVariable(6,	"N_h3",		Nh3,    	0.1	);
 	min->Minimize();
 
 	// Print covar result:
@@ -143,8 +144,8 @@ int main(int argc, char ** argv){
 	outfile 	<< "\n************ Fit covar results *************\n";
 	cerr 		<< "\t\t [ i*ndim + j ] \n";
 	outfile 	<< "\t\t [ i*ndim + j ] \n";
-	for( int i = 0 ; i < 6 ; i++ ){
-		for( int j = 0 ; j < 6 ; j++){
+	for( int i = 0 ; i < 7 ; i++ ){
+		for( int j = 0 ; j < 7 ; j++){
 			cerr << min->CovMatrix(i,j) << "\n";
 			outfile << min->CovMatrix(i,j) << "\n";
 		}
@@ -191,8 +192,9 @@ void readData(){
 
 
 double Chi2( const double *pars ){
-	// par 0-3 	= f2n/f2p parameters
-	// par 4 	= virt parameter
+	// par 0-2 	= f2n/f2p parameters
+	// par 3-4 	= virt parameter
+	// par 5-6	= norm uncertainty
 	
 	// Want to return chi2 which is calculated given the parameters to be minimized
 	double chi2 = 0.;
@@ -238,15 +240,15 @@ double Chi2( const double *pars ){
 						/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
 					double phi_int = 2*M_PI;
 
-					Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are
+					Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
 					theo_he3 += jacobian * phi_int * dTheta 
-						* ( Z*sp_p + N*sp_n*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-						* offshell(nu,x/alpha,pars[3])
+						* ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
+							+ N*sp_n*offshell(nu,x/alpha,pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
 						* F2p->Eval(x/alpha, Q2 );	
-					Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n
+					Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
 					theo_h3 += jacobian * phi_int * dTheta 
-						* ( Z*sp_n + N*sp_p*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-						* offshell(nu,x/alpha,pars[3])
+						* ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
+						 	+ N*sp_p*offshell(nu,x/alpha,pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
 						* F2p->Eval(x/alpha, Q2 );	
 
 				}// end loop over theta
@@ -256,10 +258,10 @@ double Chi2( const double *pars ){
 		theo_h3 *= (1./A) / F2d->Eval(x,Q2);
 
 		// Calculate chi2:
-		chi2 += 	pow(	(data_he3[i] - pars[4]*theo_he3) /data_he3_er[i]	, 2 );
-		chi2 +=		pow(	(pars[4] - 1.)/0.05	, 2 );	// He-3 normalization 
-		//chi2 += 	pow(	(data_h3[i]  - pars[5]*theo_h3)  /data_h3_er[i]	, 2 );
-		//chi2 += 	pow(	(pars[5] - 1.)/0.05	, 2 );  // H-3 normalization
+		chi2 += 	pow(	(data_he3[i] - pars[5]*theo_he3) /data_he3_er[i]	, 2 );
+		chi2 +=		pow(	(pars[5] - 1.)/0.05	, 2 );	// He-3 normalization 
+		chi2 += 	pow(	(data_h3[i]  - pars[6]*theo_h3)  /data_h3_er[i]	, 2 );
+		chi2 += 	pow(	(pars[6] - 1.)/0.05	, 2 );  // H-3 normalization
 
 		// Add penalty for n/p(x=1) > SU(6) or n/p(x=1) < scalar diquark
 		//if( (par[0] + par[1] + par[2]) < 0 ) chi2 += 0.1*exp(chi2);	// hard penalty
@@ -269,12 +271,13 @@ double Chi2( const double *pars ){
 	
 	cerr << "------------Finished calculations!------------\n";
 	cerr << "\tCurrent parameters:\n";
-	cerr << "\t\tnp_a: " << pars[0] << "\n";
-	cerr << "\t\tnp_b: " << pars[1] << "\n";
-	cerr << "\t\tnp_c: " << pars[2] << "\n";
-	cerr << "\t\tof_a: " << pars[3] << "\n";
-	cerr << "\t\tN_he3: "<< pars[4] << "\n";
-	cerr << "\t\tN_h3: " << pars[5] << "\n";
+	cerr << "\t\tnp_a: " 	<< pars[0] << "\n";
+	cerr << "\t\tnp_b: " 	<< pars[1] << "\n";
+	cerr << "\t\tnp_c: " 	<< pars[2] << "\n";
+	cerr << "\t\tof_p: " 	<< pars[3] << "\n";
+	cerr << "\t\tof_n: " 	<< pars[4] << "\n";
+	cerr << "\t\tN_he3: "	<< pars[5] << "\n";
+	cerr << "\t\tN_h3: " 	<< pars[6] << "\n";
 	cerr << "\tCurrent chi2:\n";
 	cerr << "\t\t" << chi2 << "\n";
 	cerr << "**********************************************\n\n";
