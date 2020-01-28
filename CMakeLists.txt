@@ -14,8 +14,14 @@ include_directories(${INCLUDES})
 add_executable(minimizer minimizer.cpp spec.cpp F2.cpp)
 target_link_libraries(minimizer ${ROOT_LIBRARIES} )
 
+add_executable(minimizer-offLin minimizer-offLin.cpp spec.cpp F2.cpp)
+target_link_libraries(minimizer-offLin ${ROOT_LIBRARIES} )
+
 add_executable(test-integral test-integral.cpp spec.cpp F2.cpp)
 target_link_libraries(test-integral ${ROOT_LIBRARIES} )
+
+add_executable(test-integral-offLin test-integral-offLin.cpp spec.cpp F2.cpp)
+target_link_libraries(test-integral-offLin ${ROOT_LIBRARIES} )
 
 add_executable(test-f2p-f2d test-f2p-f2d.cpp spec.cpp F2.cpp)
 target_link_libraries(test-f2p-f2d ${ROOT_LIBRARIES} )
