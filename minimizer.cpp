@@ -240,9 +240,10 @@ double Chi2( const double *pars ){
 						continue;
 					}
 
-					double jacobian = (1./alpha) *sin(theta)
-						* (mHe3 - mP + E_m)
-						/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
+					//double jacobian = (1./alpha) *sin(theta)
+					//	* (mHe3 - mP + E_m)
+					//	/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
+					double jacobian = sin(theta); // p^2 dp dE already inside spectral function definition
 					double phi_int = 2*M_PI;
 
 					Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF

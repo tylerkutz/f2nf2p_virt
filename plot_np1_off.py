@@ -130,10 +130,18 @@ for cov in COVs:
 	if y_max < (PARs[ii][3]) + y	: y_max = (PARs[ii][3]) + y*1.5
 	ii+=1
 
+for i in range(len(PARs)):
+	x = PARs[i][2]
+	y = PARs[i][3]
+	plt.scatter([x],[y],color=cols[i],s=75)
+
 ax.set_ylim(y_min,y_max)
 ax.set_xlim(x_min,x_max)
-ax.set_xlabel('F2n/F2p at x=1')
-ax.set_ylabel('Offshell Par a')
-plt.legend(numpoints=1,loc='best')
+ax.set_xlabel('F2n/F2p(x=1)',fontsize=16)
+ax.tick_params(axis='both', which='major', labelsize=14)
+ax.set_ylabel('Offshell parameter a',fontsize=16)
+plt.legend(numpoints=1,loc='best',fontsize=18)
+plt.grid(True)
+plt.tight_layout()
 plt.savefig("npx1_off.pdf",bbox_inches="tight")
 plt.show()

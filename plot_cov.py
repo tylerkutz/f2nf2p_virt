@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 import matplotlib.transforms as transforms
 from scipy.stats import norm
+import sys
+
 def gaussian(x, mu, sig):
     return np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))
-
 def confidence_ellipse(cov,mean_x,mean_y, ax, n_std=3.0, facecolor='none', **kwargs):
 	pearson = cov[0, 1]/np.sqrt(cov[0, 0] * cov[1, 1])
 	# Using a special case to obtain the eigenvalues of this
@@ -39,145 +40,116 @@ def confidence_ellipse(cov,mean_x,mean_y, ax, n_std=3.0, facecolor='none', **kwa
 	#return ell_radius_x,ell_radius_y
 	return scale_x,scale_y,pearson
 
-fig, axs = plt.subplots(5, 5, figsize=(19, 11))
+if len(sys.argv) != 7:
+	print "Incorrect number of arguments. Please use: "
+	print "\tpython code.py [Cov-He3+H3] [Cov-H3] [Cov-He3] [Min-He3+H3] [Min-H3] [Min-He3]"
+	exit(-1)
+
+COVs = []
+for fi in sys.argv[1:4]:
+	if '.py' in fi: continue
+	cov = []
+	ctr1 = 0
+	ctr2 = 0
+	with open(fi,"rb") as f:
+		arr = []
+		for i in range(2): next(f)
+		for line in f:
+			if '*' in line: continue
+			val = float(line.strip())
+			arr.append(val)
+			ctr2+=1
+			if ctr2 == 6:
+				ctr2 = 0
+				ctr1 += 1
+				cov.append(arr)
+				arr = []
+
+	COVs.append(cov)
+
+PARs = []
+for fi in sys.argv[4:]:
+	if '.py' in fi: continue
+	np_a = 0;
+	np_b = 0;
+	np_c = 0;
+	#np_d = 0;
+	of_a = 0;
+	N_he3 = 0;
+	N_h3 = 0;
+	with open(fi,"rb") as f:
+		for line in f:
+			if 'np_a' in line and "+/-" in line: np_a = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'N_he3'in line and "+/-" in line: N_he3= float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'N_h3' in line and "+/-" in line: N_h3 = float(line.strip().split("=")[-1].split("+/-")[0])
+			
+	PARs.append( [ np_a, np_b, np_c, of_a , N_he3 , N_h3 ] )
+
+
+fig, axs = plt.subplots(6, 6, figsize=(19, 11))
 fig.subplots_adjust(hspace=.8)
 fig.subplots_adjust(wspace=.8)
 
-cov_he3_h3 = []
-cov_h3 = []
-arr = []
-ctr1 = 0
-ctr2 = 0
-with open("build/test-he3-h3.txt","rb") as f:
-	for line in f:
-		if '#' in line: continue
-		val = float(line.strip())
-		arr.append(val)
-		ctr2+=1
-		if ctr2 == 6:
-			ctr2 = 0
-			ctr1 += 1
-			cov_he3_h3.append(arr)
-			arr = []
-with open("build/test-no-h3.txt","rb") as f:
-	for line in f:
-		if '#' in line: continue
-		val = float(line.strip())
-		arr.append(val)
-		ctr2+=1
-		if ctr2 == 6:
-			ctr2 = 0
-			ctr1 += 1
-			cov_h3.append(arr)
-			arr = []
 
-# He3 and H3 data:
-min_pars_he3_h3 = [-1.49198,1.35858,0.694808,1.29278,-2.56522]
+labels = ["np_a","np_b","np_c","of_a","N_he3","N_h3"]
+ii = 0
+for cov in COVs:
+	cols = ['orange','red','blue']
+	labs = ['He-3 and H-3','H-3','He-3']
+	for i in range(len(cov)):
+		for j in range(len(cov[i])):
+			print labs[ii],i,j
+			if j < i : 
+				axs[j][i].set_visible(False)
+				continue
+			if j == i: 
+				if cov[i][i] == 0 : continue
+				mean = PARs[ii][i];
+				#mean = min_pars_he3_h3[i];
+				std = np.sqrt(cov[i][i])
+				x_axis = np.linspace(mean-10*std,mean+10*std,100)
+				axs[j][i].plot(x_axis, gaussian(x_axis,mean,std),color=cols[ii])
 
-# He3 data only:
-min_pars_h3 = [-1.28977,0.791046,0.777979,0.905046,1.50513]
+				axs[i][j].set_title(labels[j])
+				axs[j][i].set_xlim(mean-4*std,mean+4*std)
+				axs[j][i].set_ylim(0,1)
+				
+				start, end = axs[j][i].get_xlim()
+				axs[j][i].xaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
+				start, end = axs[j][i].get_ylim()
+				axs[j][i].yaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
 
-init_pars = [-1.21721713,0.8622478,0.82047886,0.96399233]
+				continue
+			if cov[i][j] == 0 or  cov[j][j] == 0: continue
+			subcov = np.asarray([	[ cov[i][i] , cov[i][j] ], [ cov[j][i] , cov[j][j] ]	])
+			X = PARs[ii][i]	
+			Y = PARs[ii][j]	
 
-labels = ["np_a","np_b","np_c","np_d","o_a"]
-for i in range(len(cov_he3_h3)):
-	for j in range(len(cov_he3_h3[i])):
-		if j < i : 
-			axs[j][i].set_visible(False)
-			continue
-		if j == i: 
-			mean = min_pars_he3_h3[i];
-			std = np.sqrt(cov_he3_h3[i][i])
-			x_axis = np.linspace(mean-10*std,mean+10*std,100)
-			axs[j][i].plot(x_axis, gaussian(x_axis,mean,std))
+			[x,y,pear] = confidence_ellipse(subcov, X , Y , axs[j][i] , edgecolor=cols[ii])
+			axs[j][i].set_xlim(X-1.5*x,X+1.5*x)
+			axs[j][i].set_ylim(Y-1.5*y,Y+1.5*y)
+			axs[j][i].tick_params(axis='both', which='major', labelsize=10)
+			start, end = axs[j][i].get_xlim()
+			axs[j][i].xaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
+			start, end = axs[j][i].get_ylim()
+			axs[j][i].yaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
+			axs[j][i].set_xlabel(labels[i],fontsize=16)
+			axs[j][i].set_ylabel(labels[j],fontsize=16)
+			axs[j][i].grid()
+			axs[j][i].set_title("R: %.2f" % np.round(pear,2) ,fontsize=12)
 
-			axs[i][j].set_title(labels[j])
-			axs[j][i].set_xlim(mean-4*std,mean+4*std)
-			axs[j][i].set_ylim(0,1)
-			continue
-		
-		subcov_he3_h3 = np.asarray([	[ cov_he3_h3[i][i] , cov_he3_h3[i][j] ], [ cov_he3_h3[j][i] , cov_he3_h3[j][j] ]	])
-
-		[x,y,pear] = confidence_ellipse(subcov_he3_h3, min_pars_he3_h3[i] ,min_pars_he3_h3[j] , axs[j][i] , edgecolor='red')
-		axs[j][i].set_xlim(min_pars_he3_h3[i]-1.5*x,min_pars_he3_h3[i]+1.5*x)
-		axs[j][i].set_ylim(min_pars_he3_h3[j]-1.5*y,min_pars_he3_h3[j]+1.5*y)
-		axs[j][i].set_xlabel(labels[i])
-		axs[j][i].set_ylabel(labels[j])
-		axs[j][i].set_title("Pearson R: %.2f" % np.round(pear,2) )
-		#axs[i][j].set_xlim(-3*x,3*x)
-		#axs[i][j].set_ylim(-3*y,3*y)
-		#axs[i][j].set_xlim(-10,10)
+			#if x_min[j][i] > (PARs[ii][2]) - x		: x_min[j][i] = (PARs[ii][2]) - x*1.5
+			#if y_min[j][i] > (PARs[ii][3]) - y		: y_min[j][i] = (PARs[ii][3]) - y*1.5
+			#if x_max[j][i] < (PARs[ii][2]) + x		: x_max[j][i] = (PARs[ii][2]) + x*1.5
+			#if y_max[j][i] < (PARs[ii][3]) + y		: y_max[j][i] = (PARs[ii][3]) + y*1.5
+			#axs[j][i].set_ylim(y_min[j][i],y_max[j][i])
+			#axs[j][i].set_xlim(x_min[j][i],x_max[j][i])
+	ii+=1
 plt.savefig("correlation.pdf")
-
-
-
-fig2, ax2 = plt.subplots(1, 4, figsize=(19, 11))
-
-cov_he3_h3_abc_o = cov_he3_h3[0][4] + cov_he3_h3[1][4] + cov_he3_h3[2][4]
-cov_he3_h3_o_abc = cov_he3_h3[4][0] + cov_he3_h3[4][1] + cov_he3_h3[4][2]
-cov_he3_h3_abc_abc = 0
-for i in range(3):
-	cov_he3_h3_abc_abc += (cov_he3_h3[i][0] +cov_he3_h3[i][1] + cov_he3_h3[i][2] )
-cov_he3_h3_o_o = cov_he3_h3[4][4]
-new_cov_he3_h3 = np.asarray([	[cov_he3_h3_abc_abc,cov_he3_h3_abc_o],[cov_he3_h3_o_abc,cov_he3_h3_o_o] ])
-
-cov_h3_abc_o = cov_h3[0][4] + cov_h3[1][4] + cov_h3[2][4]
-cov_h3_o_abc = cov_h3[4][0] + cov_h3[4][1] + cov_h3[4][2]
-cov_h3_abc_abc = 0
-for i in range(3):
-	cov_h3_abc_abc += (cov_h3[i][0] +cov_h3[i][1] + cov_h3[i][2] )
-cov_h3_o_o = cov_h3[4][4]
-new_cov_h3 = np.asarray([	[cov_h3_abc_abc,cov_h3_abc_o],[cov_h3_o_abc,cov_h3_o_o] ])
-
-
-[x,y,pear] = confidence_ellipse(new_cov_he3_h3, min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2] , min_pars_he3_h3[-1] , ax2[0] , edgecolor='red')
-ax2[0].set_xlim((min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2])-1.5*x,(min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2])+1.5*x)
-ax2[0].set_ylim(min_pars_he3_h3[-1]-1.5*y,min_pars_he3_h3[-1]+1.5*y)
-ax2[0].set_title("He3 and H3 - Pearson R: %.2f" % np.round(pear,2) )
-
-[x,y,pear] = confidence_ellipse(new_cov_h3, min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2] , min_pars_h3[-1] , ax2[1] , edgecolor='blue')
-ax2[1].set_xlim((min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2])-1.5*x,(min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2])+1.5*x)
-ax2[1].set_ylim(min_pars_h3[-1]-1.5*y,min_pars_h3[-1]+1.5*y)
-ax2[1].set_title("He3 - Pearson R: %.2f" % np.round(pear,2) )
-
-[x1,y1,pear1] = confidence_ellipse(new_cov_he3_h3, 0,0 , ax2[2] , edgecolor='red')
-[x2,y2,pear2] = confidence_ellipse(new_cov_h3, 0,0 , ax2[2] , edgecolor='blue')
-ax2[2].set_xlim(-max(x1,x2)*1.5,max(x1,x2)*1.5)
-ax2[2].set_ylim(-max(y1,y2)*1.5,max(y1,y2)*1.5)
-
-[x1,y1,pear1] = confidence_ellipse(new_cov_he3_h3, min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2] , min_pars_he3_h3[-1] , ax2[3] , edgecolor='red')
-[x2,y2,pear2] = confidence_ellipse(new_cov_h3, min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2] , min_pars_h3[-1] , ax2[3] , edgecolor='blue')
-ax2[3].set_xlim(0.1,0.65)
-ax2[3].set_ylim(-3.5,4)
-ax2[3].set_xlabel("F2n/F2p at x=1")
-ax2[3].set_ylabel("Offshell par a")
-
-
-plt.savefig("before-after.pdf")
-
-
-plt.figure(4)
-x_axis = np.linspace(0,1,1000)
-plt.plot(x_axis, min_pars_he3_h3[0] + min_pars_he3_h3[1]*x_axis + min_pars_he3_h3[2]*np.exp( min_pars_he3_h3[3]*(np.ones(len(x_axis))-x_axis)) ,color='red',linewidth=3,label='He3 and H3')
-plt.plot(x_axis, min_pars_h3[0] + min_pars_h3[1]*x_axis + min_pars_h3[2]*np.exp( min_pars_h3[3]*(np.ones(len(x_axis))-x_axis)) ,color='blue',linewidth=3,label='He3 Only')
-plt.plot(x_axis, init_pars[0] + init_pars[1]*x_axis + init_pars[2]*np.exp( init_pars[3]*(np.ones(len(x_axis))-x_axis)) ,color='black',linestyle='--',linewidth=3,label='Initial Par')
-plt.plot([0.9,1],[min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2]+2.*np.sqrt(cov_h3_abc_abc),min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2]+2.*np.sqrt(cov_h3_abc_abc)],color='blue')
-plt.plot([0.9,1],[min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2]-2.*np.sqrt(cov_h3_abc_abc),min_pars_h3[0]+min_pars_h3[1]+min_pars_h3[2]-2.*np.sqrt(cov_h3_abc_abc)],color='blue')
-plt.plot([0.9,1],[min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2]+2.*np.sqrt(cov_he3_h3_abc_abc),min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2]+2.*np.sqrt(cov_he3_h3_abc_abc)],color='red')
-plt.plot([0.9,1],[min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2]-2.*np.sqrt(cov_he3_h3_abc_abc),min_pars_he3_h3[0]+min_pars_he3_h3[1]+min_pars_he3_h3[2]-2.*np.sqrt(cov_he3_h3_abc_abc)],color='red')
-plt.ylabel('F2n/F2p')
-plt.legend(numpoints=1,loc='best')
-plt.xlabel('x')
-plt.ylim([0.1,1])
-plt.savefig("f2nf2p.pdf")
 plt.show()
-'''
-for ax in axs:
-	for subax in ax:
-		# Make a corner plot from this!
-		sub_cov = 
-		#confidence_ellipse(cov, 0,0,ax, edgecolor='red')
-		subax.set_xlim(-10,10)
-		subax.set_ylim(-10,10)
 
-'''
+
+
