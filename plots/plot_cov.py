@@ -56,7 +56,7 @@ for fi in sys.argv[1:4]:
 		for i in range(2): next(f)
 		for line in f:
 			if '*' in line: continue
-			val = float(line.strip())
+			val = float(line.strip().split(" ")[0])
 			arr.append(val)
 			ctr2+=1
 			if ctr2 == 7:

@@ -41,15 +41,9 @@ F2 * F2p = new F2(0);
 F2 * F2d = new F2(1);
 
 // Spec functions for n/p in He-3
-map<double,map<double,double>> test_n = kaptari_sf->getFullN();
-map<double,map<double,double>> test_p = kaptari_sf->getFullP();
 map<double,map<double,double>> rho_n = kaptari_sf->getFullRhoN();
 map<double,map<double,double>> rho_p = kaptari_sf->getFullRhoP();
 // 	iterators to loop over 
-map<double,map<double,double>>::iterator itK_n;
-map<double,map<double,double>>::iterator itK_p;
-map<double,double>::iterator itE_n;
-map<double,double>::iterator itE_p;
 map<double,map<double,double>>::iterator itAl_n;
 map<double,map<double,double>>::iterator itAl_p;
 map<double,double>::iterator itNu_n;
@@ -60,7 +54,6 @@ double offshell( double virt, double xB , double off_a , double off_b );
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to minimize
-double Chi2( const double *pars );
 double Chi2_Rho( const double *pars );
 
 int opt = -1;
@@ -94,7 +87,6 @@ int main(int argc, char ** argv){
 	min->SetPrintLevel(1);
 
 	ROOT::Math::Functor f(&Chi2,7);
-	//ROOT::Math::Functor f(&Chi2_Rho,6);
 	min->SetFunction(f);
 	min->SetVariable(0,	"np_a",		np_a, 		0.1	);
 	min->SetVariable(1,	"np_b",		np_b, 		0.1	);
@@ -296,20 +288,23 @@ double Chi2_Rho( const double *pars ){
 				double sp_n = itNu_n->second;
 				double sp_p = itNu_p->second;
 
-				// Flag problematic kinematics:
-				if( x/alpha < 0 || x/alpha > 1 ){
-					//cout << "shit\n";
-					continue;
-				}
+				double jacobian = 1./alpha;
 
-				//Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-				//theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
-				//		+ N*sp_n*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-				//	* F2p->Eval(x/alpha, Q2 );	
-				//Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-				//theo_h3 +=  ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
-				//		+ N*sp_p*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-				//	* F2p->Eval(x/alpha, Q2 );	
+				// Flag problematic kinematics for the delta conservation:
+				if( alpha < x ) continue;
+				else if( alpha > A ) continue;
+				if( nu > 0. ) continue;
+
+				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
+				theo_he3 += jacobian *
+					* ( Z*sp_p*offshell(nu,x/alpha,pars[3],pars[4]) 
+						+ N*sp_n*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/alpha, Q2 );
+				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+					* ( Z*sp_n*offshell(nu,x/alpha,pars[3],pars[4]) 
+						+ N*sp_p*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/alpha, Q2 );
 
 			}// end loop over nu
 		}// end loop over alpha
@@ -318,12 +313,12 @@ double Chi2_Rho( const double *pars ){
 
 		// Calculate chi2:
 		if( opt == 0 || opt == 2 ){
-			chi2 += 	pow(	(data_he3[i] - pars[4]*theo_he3) /data_he3_er[i]	, 2 );
-			chi2 +=		pow(	(pars[4] - 1.)/0.05	, 2 );	// He-3 normalization 
+			chi2 += 	pow(	(data_he3[i] - pars[5]*theo_he3) /data_he3_er[i]	, 2 );
+			chi2 +=		pow(	(pars[5] - 1.)/0.05	, 2 );	// He-3 normalization 
 		}
 		if( opt == 0 || opt == 1 ){
-			chi2 += 	pow(	(data_h3[i]  - pars[5]*theo_h3)  /data_h3_er[i]	, 2 );
-			chi2 += 	pow(	(pars[5] - 1.)/0.05	, 2 );  // H-3 normalization
+			chi2 += 	pow(	(data_h3[i]  - pars[6]*theo_h3)  /data_h3_er[i]	, 2 );
+			chi2 += 	pow(	(pars[6] - 1.)/0.05	, 2 );  // H-3 normalization
 		}
 
 
@@ -335,8 +330,9 @@ double Chi2_Rho( const double *pars ){
 	cerr << "\t\tnp_b: " 	<< pars[1] << "\n";
 	cerr << "\t\tnp_c: " 	<< pars[2] << "\n";
 	cerr << "\t\tof_a: " 	<< pars[3] << "\n";
-	cerr << "\t\tN_he3: "	<< pars[4] << "\n";
-	cerr << "\t\tN_h3: " 	<< pars[5] << "\n";
+	cerr << "\t\tof_b: " 	<< pars[4] << "\n";
+	cerr << "\t\tN_he3: "	<< pars[5] << "\n";
+	cerr << "\t\tN_h3: " 	<< pars[6] << "\n";
 	cerr << "\tCurrent chi2:\n";
 	cerr << "\t\t" << chi2 << "\n";
 	cerr << "**********************************************\n\n";

@@ -31,13 +31,18 @@ map<double,map<double,double>>::iterator itK_n;
 map<double,map<double,double>>::iterator itK_p;
 map<double,double>::iterator itE_n;
 map<double,double>::iterator itE_p;
+vector<double> alphas = kaptari_sf->getAlphas();
+vector<double> nus = kaptari_sf->getNus();
+vector<double> rho_p = kaptari_sf->getRhoProtons();
+vector<double> rho_n = kaptari_sf->getRhoNeutrons();
 
 // Functions with parameters to be minimized
-double offshell( double virt, double xB , double off_a );
+double offshell( double virt, double xB , double off_a , double off_b );
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to create theory point
 void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const double *pars , double mom_cut );
+void calc_theo_rho( double x, double Q2, double &theo_he3, double &theo_h3 , const double *pars , double mom_cut );
 
 
 // Main
@@ -53,7 +58,7 @@ int main(int argc, char ** argv){
 	outfile.open(argv[1]);
 
 	// Best fit n/p to our model and no offshell
-	const double pars_onlyNP[6] = {0.568697,2.20877,0.41562,0,1.,1.};
+	const double pars_onlyNP[7] = {0.568697,2.20877,0.41562,0,0,1.,1.};
 
 
 	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
@@ -62,7 +67,7 @@ int main(int argc, char ** argv){
 		cout << "\tx = " << x << "\n";
 
 		// Best fit n/p to our model and no offshell
-		calc_theo(x,Q2,he3,h3,pars_onlyNP,0.);
+		calc_theo_rho(x,Q2,he3,h3,pars_onlyNP,0.);
 		outfile << x << " " << Q2 << " " << he3 << " " << h3 << "\n";
 
 		//calc_theo(x,Q2,he3,h3,pars,0.);			// Full EMC ratio
@@ -111,8 +116,8 @@ int main(int argc, char ** argv){
 	return 0;
 }
 
-double offshell( double virt, double xB , double off_a ){
-	return 1 + off_a*virt*virt;
+double offshell( double virt, double xB , double off_a , double off_b ){
+	return 1 + (off_a + off_b*xB)*virt*virt;
 }
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c ){
 	//return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
@@ -162,16 +167,16 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
 				theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
-						+ N*sp_n*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
-					* F2p->Eval(x/y, Q2 )
-					* pars[4];
-				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
-						+ N*sp_p*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* ( Z*sp_p*offshell(nu,x/y,pars[3],pars[4]) 
+						+ N*sp_n*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 					* F2p->Eval(x/y, Q2 )
 					* pars[5];
+				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+					* ( Z*sp_n*offshell(nu,x/y,pars[3],pars[4]) 
+						+ N*sp_p*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/y, Q2 )
+					* pars[6];
 
 			}// end loop over theta
 		}// end loop over E miss
@@ -183,3 +188,49 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 }
 
 
+void calc_theo_rho( double x, double Q2, double &theo_he3, double &theo_h3 , const double *pars , double mom_cut ){
+	int A 		= 3;
+	double N,Z;
+	theo_he3 = 0; theo_h3 = 0;
+	double baryon = 0, momentum = 0;
+	double xalpha = 0;
+	double counts = 0;
+	for( int i = 0 ; i < rho_p.size() ; i++ ){
+
+			double alpha = alphas.at(i);
+			double nu = -nus.at(i)/(mP*mP);
+
+			// Grab spectral function values:
+			double sp_n = rho_n.at(i);
+			double sp_p = rho_p.at(i);
+
+
+			//cout << alpha << " " << nu*mP*mP << " " << sp_p << "\n";
+			baryon += (2.*sp_p + 1.*sp_n);
+			momentum += (2*sp_p + 1*sp_n)*alpha;
+
+			// Flag problematic kinematics for the delta conservation:
+			if( alpha < x ) continue;
+			else if( alpha > A ) continue;
+			if( nu > 0. ) continue;
+
+			xalpha += x/alpha;
+			counts++;
+
+			Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
+			theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3],pars[4]) 
+					+ N*sp_n*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+				* F2p->Eval(x/alpha, Q2 )
+				* pars[5];
+			Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+			theo_h3 += ( Z*sp_n*offshell(nu,x/alpha,pars[3],pars[4]) 
+					+ N*sp_p*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+				* F2p->Eval(x/alpha, Q2 )
+				* pars[6];
+
+	}// end loop over i
+	//cout << x << " " << xalpha/counts << "\n";
+	cout << baryon/3. << " " << momentum/3. << "\n";
+	theo_he3 *= (1./A) / F2d->Eval(x,Q2);
+	theo_h3 *= (1./A) / F2d->Eval(x,Q2);
+}

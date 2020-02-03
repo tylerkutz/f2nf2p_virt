@@ -14,11 +14,15 @@ spec::~spec(){}
 void spec::fill_rho(){
 	std::ifstream f_corr("../../include/jacksonLC_A3.dat");
 	double alpha, dalpha, nu, dnu, rho_p, rho_n;
+	double baryon = 0;
 	if (f_corr.is_open() == true){
 		while (!f_corr.eof()) { 
+			alpha = 0; dalpha = 0; nu = 0; dnu = 0; rho_p = 0; rho_n = 0;
 			f_corr >> alpha >> dalpha >> nu >> dnu >> rho_p >> rho_n;
-			full_rho_proton[alpha][nu] = rho_p;
-			full_rho_neutron[alpha][nu] = rho_n;
+			alphas.push_back(alpha);
+			nus.push_back(-nu);
+			rho_protons.push_back(rho_p);
+			rho_neutrons.push_back(rho_n);
 		}
 	}
 	else{ cout << "\tFailed to find rho...\n"; }
@@ -66,11 +70,17 @@ std::map<double,std::map<double,double>> spec::getFullN(void){
 std::map<double,std::map<double,double>> spec::getFullP(void){
 	return full_SF_proton;
 }
-std::map<double,std::map<double,double>> spec::getFullRhoN(void){
-	return full_rho_neutron;
+std::vector<double> spec::getAlphas(void){
+	return alphas;
 }
-std::map<double,std::map<double,double>> spec::getFullRhoP(void){
-	return full_rho_proton;
+std::vector<double> spec::getNus(void){
+	return nus;
+}
+std::vector<double> spec::getRhoProtons(void){
+	return rho_protons;
+}
+std::vector<double> spec::getRhoNeutrons(void){
+	return rho_neutrons;
 }
 std::map<double,std::map<double,double>> spec::getContinuumN(void){
 	return contin_neutron;
