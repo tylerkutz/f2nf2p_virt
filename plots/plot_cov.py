@@ -131,17 +131,18 @@ for cov in COVs:
 			Y = PARs[ii][j]	
 
 			[x,y,pear] = confidence_ellipse(subcov, X , Y , axs[j][i] , edgecolor=cols[ii])
-			axs[j][i].set_xlim(X-1.5*x,X+1.5*x)
-			axs[j][i].set_ylim(Y-1.5*y,Y+1.5*y)
-			axs[j][i].tick_params(axis='both', which='major', labelsize=10)
-			start, end = axs[j][i].get_xlim()
-			axs[j][i].xaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
-			start, end = axs[j][i].get_ylim()
-			axs[j][i].yaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
-			axs[j][i].set_xlabel(labels[i],fontsize=16)
-			axs[j][i].set_ylabel(labels[j],fontsize=16)
-			axs[j][i].grid()
-			axs[j][i].set_title("R: %.2f" % np.round(pear,2) ,fontsize=12)
+			if( ii == 0):
+				axs[j][i].set_xlim(X-1.5*x,X+1.5*x)
+				axs[j][i].set_ylim(Y-1.5*y,Y+1.5*y)
+				axs[j][i].tick_params(axis='both', which='major', labelsize=10)
+				start, end = axs[j][i].get_xlim()
+				axs[j][i].xaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
+				start, end = axs[j][i].get_ylim()
+				axs[j][i].yaxis.set_ticks(np.round(np.linspace(start, end, 3),2))
+				axs[j][i].set_xlabel(labels[i],fontsize=16)
+				axs[j][i].set_ylabel(labels[j],fontsize=16)
+				axs[j][i].grid()
+				axs[j][i].set_title("R: %.2f" % np.round(pear,2) ,fontsize=12)
 
 			#if x_min[j][i] > (PARs[ii][2]) - x		: x_min[j][i] = (PARs[ii][2]) - x*1.5
 			#if y_min[j][i] > (PARs[ii][3]) - y		: y_min[j][i] = (PARs[ii][3]) - y*1.5

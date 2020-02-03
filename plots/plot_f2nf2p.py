@@ -19,10 +19,10 @@ for fi in sys.argv:
 		for i in range(2): next(f)
 		for line in f:
 			if '*' in line: continue
-			val = float(line.strip())
+			val = float(line.strip().split(" ")[0])
 			arr.append(val)
 			ctr2+=1
-			if ctr2 == 6:
+			if ctr2 == 7:
 				ctr2 = 0
 				ctr1 += 1
 				cov.append(arr)
