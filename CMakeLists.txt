@@ -6,25 +6,6 @@ find_package(ROOT REQUIRED)
 
 project (f2nf2p)
 
+add_subdirectory(minimizers)
 #add_subdirectory(alglib)
 
-set(INCLUDES ${ROOT_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/include )
-include_directories(${INCLUDES})
-
-add_executable(minimizer minimizer.cpp spec.cpp F2.cpp)
-target_link_libraries(minimizer ${ROOT_LIBRARIES} )
-
-add_executable(minimizer-offshellCJ minimizer-offshellCJ.cpp spec.cpp F2.cpp)
-target_link_libraries(minimizer-offshellCJ ${ROOT_LIBRARIES} )
-
-add_executable(test-integral test-integral.cpp spec.cpp F2.cpp)
-target_link_libraries(test-integral ${ROOT_LIBRARIES} )
-
-add_executable(test-sumrules test-sumrules.cpp spec.cpp F2.cpp)
-target_link_libraries(test-sumrules ${ROOT_LIBRARIES} )
-
-add_executable(test-integral-offLin test-integral-offLin.cpp spec.cpp F2.cpp)
-target_link_libraries(test-integral-offLin ${ROOT_LIBRARIES} )
-
-add_executable(test-f2p-f2d test-f2p-f2d.cpp spec.cpp F2.cpp)
-target_link_libraries(test-f2p-f2d ${ROOT_LIBRARIES} )
