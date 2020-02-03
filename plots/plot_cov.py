@@ -59,7 +59,7 @@ for fi in sys.argv[1:4]:
 			val = float(line.strip())
 			arr.append(val)
 			ctr2+=1
-			if ctr2 == 6:
+			if ctr2 == 7:
 				ctr2 = 0
 				ctr1 += 1
 				cov.append(arr)
@@ -75,6 +75,7 @@ for fi in sys.argv[4:]:
 	np_c = 0;
 	#np_d = 0;
 	of_a = 0;
+	of_b = 0;
 	N_he3 = 0;
 	N_h3 = 0;
 	with open(fi,"rb") as f:
@@ -83,18 +84,19 @@ for fi in sys.argv[4:]:
 			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'of_b' in line and "+/-" in line: of_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_he3'in line and "+/-" in line: N_he3= float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_h3' in line and "+/-" in line: N_h3 = float(line.strip().split("=")[-1].split("+/-")[0])
 			
-	PARs.append( [ np_a, np_b, np_c, of_a , N_he3 , N_h3 ] )
+	PARs.append( [ np_a, np_b, np_c, of_a , of_b , N_he3 , N_h3 ] )
 
 
-fig, axs = plt.subplots(6, 6, figsize=(19, 11))
+fig, axs = plt.subplots(7, 7, figsize=(19, 11))
 fig.subplots_adjust(hspace=.8)
 fig.subplots_adjust(wspace=.8)
 
 
-labels = ["np_a","np_b","np_c","of_a","N_he3","N_h3"]
+labels = ["np_a","np_b","np_c","of_a","of_b","N_he3","N_h3"]
 ii = 0
 for cov in COVs:
 	cols = ['orange','red','blue']

@@ -7,5 +7,6 @@ find_package(ROOT REQUIRED)
 project (f2nf2p)
 
 add_subdirectory(minimizers)
+add_subdirectory(tests)
 #add_subdirectory(alglib)
 

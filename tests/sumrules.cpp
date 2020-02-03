@@ -48,21 +48,20 @@ int main(int argc, char ** argv){
 		return -1;
 	}
 	
-	// He-3 + H-3 fit with jacobian fix
-	const double pars[6] 		= {0.568697,2.20877,0.415621,-0.118305,1.00649,0.995528};
-	const double pars_noOff[6] 	= {0.568697,2.20877,0.415621,0.0,1.00649,0.995528};
+	// Best fit n/p to our model and no offshell
+	const double pars_onlyNP[6] = {0.568697,2.20877,0.41562,0,1.,1.};
+
 
 	ofstream outfile;
 	outfile.open(argv[1]);
-
 	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
 		double Q2 = 14.*x;
 		double baryon = 0, momentum = 0;
 		cout << "\tx = " << x << "\n";
-		
-		calc_theo( x , Q2 , baryon , momentum , pars );
+
+		// Best fit n/p to our model and no offshell
+		calc_theo(x,Q2,baryon,momentum,pars_onlyNP);
 		cout << x << " " << Q2 << " " << baryon << " " << momentum << "\n";
-		outfile << x << " " << Q2 << " " << baryon << " " << momentum << "\n";
 
 	}
 	outfile.close();
@@ -94,35 +93,31 @@ void calc_theo( double x, double Q2, double &baryon, double &momentum , const do
 
 				// Convert from Kaptari E to initial E:
 				double E_i = mHe3 - sqrt( pow( mHe3 - mP + E_m , 2 ) + p_m*p_m  );
-				// Define alpha and nu from (E_i,p_i):
-				double alpha = (E_i - p_m*cos(theta) )/mP;
+				// Define y and nu from (E_i,p_i):
+				double y = (E_i + p_m*cos(theta) )/mP;
 				double nu = (E_i*E_i - p_m*p_m - mP*mP)/(mP*mP); //unitless
 
 				// Grab spectral function values:
 				double sp_n = itE_n->second;
 				double sp_p = itE_p->second;
 
-				// Flag problematic kinematics:
-				//if( x/alpha < 0 || x/alpha > 1 ){
-				//	continue;
-				//}
-				//if( alpha < 0 ) continue;
-				//if( x / alpha > 1 ) continue;
-
-				//double jacobian = (1./alpha) *sin(theta)
-				//	* (mHe3 - mP + E_m)
-				//	/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
 				double jacobian = sin(theta); // p^2 dp dE already inside spectral function definition
 				double phi_int = 2*M_PI;
-				double flux_fact = 1. + (p_m*cos(theta))/sqrt(p_m*p_m + mP*mP);
+				//double flux_fact = 1. + (p_m*cos(theta))/sqrt(p_m*p_m + mP*mP);
+				double flux_fact = 1. + (p_m*cos(theta))/E_i;
+				double mass_fact = mHe3/(mP*3.);
 
+				// Flag problematic kinematics for the delta conservation (?):
+				//if( y < x ) continue;
+				if(y > A)	continue;
+				if(y < 0)	continue;
+				if( nu > 0. )	continue;
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-				baryon += jacobian * flux_fact * phi_int * dTheta
+				baryon += jacobian * flux_fact * phi_int * mass_fact * dTheta 
 					* ( Z*sp_p + N*sp_n );
-				momentum += jacobian * flux_fact * phi_int * dTheta
-					* ( Z*sp_p + N*sp_n )
-					* alpha;
+				momentum += jacobian * flux_fact * phi_int * mass_fact * dTheta
+					* ( Z*sp_p + N*sp_n ) * y;
 
 			}// end loop over theta
 		}// end loop over E miss

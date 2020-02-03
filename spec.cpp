@@ -12,7 +12,7 @@ spec::~spec(){}
 
 // Private member function
 void spec::fill_rho(){
-	std::ifstream f_corr("../include/jacksonLC_A3.dat");
+	std::ifstream f_corr("../../include/jacksonLC_A3.dat");
 	double alpha, dalpha, nu, dnu, rho_p, rho_n;
 	if (f_corr.is_open() == true){
 		while (!f_corr.eof()) { 
@@ -26,7 +26,7 @@ void spec::fill_rho(){
 
 // Private member function
 void spec::fill_arrays(){
-	std::ifstream f_corr("../include/kaptarisf_3par.dat");
+	std::ifstream f_corr("../../include/kaptarisf_3par.dat");
 
 	char line[256]; 
 	for( int i = 0 ; i < 1 ; i ++) f_corr.getline(line, 256);  // skip the first line
