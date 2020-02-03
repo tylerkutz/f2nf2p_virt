@@ -42,11 +42,17 @@ F2 * F2d = new F2(1);
 // Spec functions for n/p in He-3
 map<double,map<double,double>> test_n = kaptari_sf->getFullN();
 map<double,map<double,double>> test_p = kaptari_sf->getFullP();
+map<double,map<double,double>> rho_n = kaptari_sf->getFullRhoN();
+map<double,map<double,double>> rho_p = kaptari_sf->getFullRhoP();
 // 	iterators to loop over 
 map<double,map<double,double>>::iterator itK_n;
 map<double,map<double,double>>::iterator itK_p;
 map<double,double>::iterator itE_n;
 map<double,double>::iterator itE_p;
+map<double,map<double,double>>::iterator itAl_n;
+map<double,map<double,double>>::iterator itAl_p;
+map<double,double>::iterator itNu_n;
+map<double,double>::iterator itNu_p;
 
 // Functions with parameters to be minimized
 double offshell( double virt, double xB , double off_a );
@@ -54,6 +60,7 @@ double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to minimize
 double Chi2( const double *pars );
+double Chi2_Rho( const double *pars );
 
 int opt = -1;
 // Main
@@ -91,11 +98,11 @@ int main(int argc, char ** argv){
 	
 	// New parameters from new param of F2n/F2p
 	// 	OG
-	const double np_a 	= 0.46500111;
-	const double np_b 	= 2.68513156;
-	const double np_c 	= 0.47170629;
+	const double np_a 	= 0.568697;
+	const double np_b 	= 2.20877;
+	const double np_c 	= 0.41562;
 	const double of_a 	= 0.;
-	const double Nhe3 	= 1.;
+	const double Nhe3 	= 0.97;
 	const double Nh3 	= 1.;
 
 	// Starting parameters
@@ -129,6 +136,7 @@ int main(int argc, char ** argv){
 	min->SetPrintLevel(1);
 
 	ROOT::Math::Functor f(&Chi2,6);
+	//ROOT::Math::Functor f(&Chi2_Rho,6);
 	min->SetFunction(f);
 	min->SetVariable(0,	"np_a",		np_a, 		0.1	);
 	min->SetVariable(1,	"np_b",		np_b, 		0.1	);
@@ -227,39 +235,119 @@ double Chi2( const double *pars ){
 
 					// Convert from Kaptari E to initial E:
 					double E_i = mHe3 - sqrt( pow( mHe3 - mP + E_m , 2 ) + p_m*p_m  );
-					// Define alpha and nu from (E_i,p_i):
-					double alpha = (E_i - p_m*cos(theta) )/mP;
+					// Define y and nu from (E_i,p_i):
+					double y = (E_i + p_m*cos(theta) )/mP;
 					double nu = (E_i*E_i - p_m*p_m - mP*mP)/(mP*mP); //unitless
 
 					// Grab spectral function values:
 					double sp_n = itE_n->second;
 					double sp_p = itE_p->second;
 
-					// Flag problematic kinematics:
-					if( x/alpha < 0 || x/alpha > 1 ){
-						continue;
-					}
-
-					//double jacobian = (1./alpha) *sin(theta)
-					//	* (mHe3 - mP + E_m)
-					//	/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
 					double jacobian = sin(theta); // p^2 dp dE already inside spectral function definition
 					double phi_int = 2*M_PI;
+					double flux_fact = 1. + (p_m*cos(theta))/E_i;
+					double mass_fact = mHe3/(mP*3.);
+
+					// Flag problematic kinematics for the delta conservation (?):
+					if( y < x ) continue;
+					if( y > 3.) continue;
+					if( nu > 0. ) continue;
 
 					Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-					theo_he3 += jacobian * phi_int * dTheta 
-						* ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
-							+ N*sp_n*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-						* F2p->Eval(x/alpha, Q2 );	
+					theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+						* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
+							+ N*sp_n*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+						* F2p->Eval(x/y, Q2 );
 					Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-					theo_h3 += jacobian * phi_int * dTheta 
-						* ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
-						 	+ N*sp_p*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-						* F2p->Eval(x/alpha, Q2 );	
+					theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+						* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
+							+ N*sp_p*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+						* F2p->Eval(x/y, Q2 );
 
 				}// end loop over theta
 			}// end loop over E miss
 		}// end loop over p miss
+		theo_he3 *= (1./A) / F2d->Eval(x,Q2);
+		theo_h3 *= (1./A) / F2d->Eval(x,Q2);
+
+		// Calculate chi2:
+		if( opt == 0 || opt == 2 ){
+			chi2 += 	pow(	(data_he3[i] - pars[4]*theo_he3) /data_he3_er[i]	, 2 );
+			chi2 +=		pow(	(pars[4] - 1.)/0.05	, 2 );	// He-3 normalization 
+		}
+		if( opt == 0 || opt == 1 ){
+			chi2 += 	pow(	(data_h3[i]  - pars[5]*theo_h3)  /data_h3_er[i]	, 2 );
+			chi2 += 	pow(	(pars[5] - 1.)/0.05	, 2 );  // H-3 normalization
+		}
+
+
+	}// end loop over data
+	
+	cerr << "------------Finished calculations!------------\n";
+	cerr << "\tCurrent parameters:\n";
+	cerr << "\t\tnp_a: " 	<< pars[0] << "\n";
+	cerr << "\t\tnp_b: " 	<< pars[1] << "\n";
+	cerr << "\t\tnp_c: " 	<< pars[2] << "\n";
+	cerr << "\t\tof_a: " 	<< pars[3] << "\n";
+	cerr << "\t\tN_he3: "	<< pars[4] << "\n";
+	cerr << "\t\tN_h3: " 	<< pars[5] << "\n";
+	cerr << "\tCurrent chi2:\n";
+	cerr << "\t\t" << chi2 << "\n";
+	cerr << "**********************************************\n\n";
+
+	return chi2;
+}
+
+double Chi2_Rho( const double *pars ){
+	// par 0-2 	= f2n/f2p parameters
+	// par 3-4 	= virt parameter
+	// par 5-6	= norm uncertainty
+	
+	// Want to return chi2 which is calculated given the parameters to be minimized
+	double chi2 = 0.;
+	cerr << "************ Fitting in progress *************\n";
+	// Perform loop over exp data
+	for( int i = 0 ; i < 22 ; i++ ){
+		if( i%5==0) cerr << "\ton point " << i << "\n";
+		double x 	= data_x[i];
+		double Q2 	= 14.*x;
+		int A 		= 3;
+		double N,Z;
+
+		// For each value in x, need to evaluate integral for both He-3, H-3:
+		double theo_he3 = 0;
+		double theo_h3	= 0;
+
+		for(	itAl_n = rho_n.begin(), itAl_p = rho_p.begin(); 
+				itAl_n != rho_n.end() && itAl_p!= rho_p.end(); itAl_n++, itAl_p++){
+
+			double alpha = itAl_n->first;
+			for( itNu_n = itAl_n->second.begin(), itNu_p = itAl_p->second.begin(); 
+					itNu_n != itAl_n->second.end() && itNu_p != itAl_p->second.end(); itNu_n++, itNu_p++){
+
+				double nu = itNu_n->first/(mP*mP);
+
+				// Grab spectral function values:
+				double sp_n = itNu_n->second;
+				double sp_p = itNu_p->second;
+
+				// Flag problematic kinematics:
+				if( x/alpha < 0 || x/alpha > 1 ){
+					//cout << "shit\n";
+					continue;
+				}
+
+				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
+				theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
+						+ N*sp_n*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/alpha, Q2 );	
+				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+				theo_h3 +=  ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
+						+ N*sp_p*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/alpha, Q2 );	
+
+			}// end loop over nu
+		}// end loop over alpha
 		theo_he3 *= (1./A) / F2d->Eval(x,Q2);
 		theo_h3 *= (1./A) / F2d->Eval(x,Q2);
 

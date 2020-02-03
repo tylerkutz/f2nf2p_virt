@@ -106,20 +106,21 @@ void calc_theo( double x, double Q2, double &baryon, double &momentum , const do
 				//if( x/alpha < 0 || x/alpha > 1 ){
 				//	continue;
 				//}
-				if( alpha < 0 ) continue;
-				if( x / alpha > 1 ) continue;
+				//if( alpha < 0 ) continue;
+				//if( x / alpha > 1 ) continue;
 
 				//double jacobian = (1./alpha) *sin(theta)
 				//	* (mHe3 - mP + E_m)
 				//	/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
 				double jacobian = sin(theta); // p^2 dp dE already inside spectral function definition
 				double phi_int = 2*M_PI;
+				double flux_fact = 1. + (p_m*cos(theta))/sqrt(p_m*p_m + mP*mP);
 
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-				baryon += jacobian * phi_int * dTheta
+				baryon += jacobian * flux_fact * phi_int * dTheta
 					* ( Z*sp_p + N*sp_n );
-				momentum += jacobian * phi_int * dTheta
+				momentum += jacobian * flux_fact * phi_int * dTheta
 					* ( Z*sp_p + N*sp_n )
 					* alpha;
 

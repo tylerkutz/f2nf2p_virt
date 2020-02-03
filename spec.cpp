@@ -5,9 +5,24 @@ using namespace std;
 // Constructor
 spec::spec(){
 	fill_arrays();
+	fill_rho();
 }
 // Destructor
 spec::~spec(){}
+
+// Private member function
+void spec::fill_rho(){
+	std::ifstream f_corr("../include/jacksonLC_A3.dat");
+	double alpha, dalpha, nu, dnu, rho_p, rho_n;
+	if (f_corr.is_open() == true){
+		while (!f_corr.eof()) { 
+			f_corr >> alpha >> dalpha >> nu >> dnu >> rho_p >> rho_n;
+			full_rho_proton[alpha][nu] = rho_p;
+			full_rho_neutron[alpha][nu] = rho_n;
+		}
+	}
+	else{ cout << "\tFailed to find rho...\n"; }
+}
 
 // Private member function
 void spec::fill_arrays(){
@@ -50,6 +65,12 @@ std::map<double,std::map<double,double>> spec::getFullN(void){
 }
 std::map<double,std::map<double,double>> spec::getFullP(void){
 	return full_SF_proton;
+}
+std::map<double,std::map<double,double>> spec::getFullRhoN(void){
+	return full_rho_neutron;
+}
+std::map<double,std::map<double,double>> spec::getFullRhoP(void){
+	return full_rho_proton;
 }
 std::map<double,std::map<double,double>> spec::getContinuumN(void){
 	return contin_neutron;

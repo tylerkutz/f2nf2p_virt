@@ -14,8 +14,8 @@ include_directories(${INCLUDES})
 add_executable(minimizer minimizer.cpp spec.cpp F2.cpp)
 target_link_libraries(minimizer ${ROOT_LIBRARIES} )
 
-add_executable(minimizer-offLin minimizer-offLin.cpp spec.cpp F2.cpp)
-target_link_libraries(minimizer-offLin ${ROOT_LIBRARIES} )
+add_executable(minimizer-offshellCJ minimizer-offshellCJ.cpp spec.cpp F2.cpp)
+target_link_libraries(minimizer-offshellCJ ${ROOT_LIBRARIES} )
 
 add_executable(test-integral test-integral.cpp spec.cpp F2.cpp)
 target_link_libraries(test-integral ${ROOT_LIBRARIES} )

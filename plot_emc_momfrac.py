@@ -122,8 +122,9 @@ plt.ylim([0.8,1.4])
 plt.xlabel('xB')
 plt.ylabel('A=3 EMC Ratio')
 plt.grid(True)
-plt.savefig("emc-effect-without-off.pdf",bbox_inches="tight")
-
+plt.show()
+#plt.savefig("emc-effect-without-off.pdf",bbox_inches="tight")
+'''
 plt.figure(3)
 plt.plot(x,	he3_full - he3_onlySP ,	label='All')
 plt.plot(x,	he3_full_1 - he3_onlySP_1 ,	label='>50')
@@ -155,34 +156,4 @@ plt.savefig("off-breakdown2.pdf",bbox_inches="tight")
 
 plt.show()
 
-'''
-plt.figure(1)
-plt.plot(thisFi_x,thisFi_he3,color='red',label='Mom > 0')
-plt.plot(thisFi_x,thisFi_h3,color='blue',label='Mom > 0')
-
-plt.savefig('emc-ratios.pdf',bbox_inches="tight")
-
-plt.figure(2)
-thisFi_he3=np.asarray(thisFi_he3)
-thisFi_he3_2=np.asarray(thisFi_he3_2)
-thisFi_he3_4=np.asarray(thisFi_he3_4)
-thisFi_he3_6=np.asarray(thisFi_he3_6)
-thisFi_h3_4=np.asarray(thisFi_h3_4)
-thisFi_h3_6=np.asarray(thisFi_h3_6)
-thisFi_h3_8=np.asarray(thisFi_h3_8)
-plt.plot(thisFi_x,thisFi_he3_2/thisFi_he3,linestyle='solid',label='Mom > 50',linewidth=3,color='red')
-plt.plot(thisFi_x,thisFi_he3_4/thisFi_he3,linestyle='dotted',label='Mom > 75',linewidth=3,color='red')
-plt.plot(thisFi_x,thisFi_he3_6/thisFi_he3,linestyle='dashed',label='Mom > 100',linewidth=3,color='red')
-plt.plot(thisFi_x,thisFi_he3_8/thisFi_he3,linestyle='dashdot',label='Mom > 200',linewidth=3,color='red')
-plt.plot(thisFi_x,thisFi_h3_2/thisFi_h3,linestyle='solid',linewidth=3,color='blue')
-plt.plot(thisFi_x,thisFi_h3_4/thisFi_h3,linestyle='dotted',linewidth=3,color='blue')
-plt.plot(thisFi_x,thisFi_h3_6/thisFi_h3,linestyle='dashed',linewidth=3,color='blue')
-plt.plot(thisFi_x,thisFi_h3_8/thisFi_h3,linestyle='dashdot',linewidth=3,color='blue')
-plt.legend(numpoints=1,loc=3)
-plt.grid(True)
-plt.xlim([0.1,0.9])
-plt.ylim([-0.2,1])
-plt.savefig('emc-momfractions.pdf',bbox_inches="tight")
-
-plt.show()
 '''

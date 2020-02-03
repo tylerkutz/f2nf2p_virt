@@ -68,18 +68,21 @@ int main(int argc, char ** argv){
 	// He-3 with offshell and np starting with new param and norm err from init
 	//const double pars[6] = {0.34658,2.3002,0.246982,1.82858,1.00002,1};
 	
-
 	// He-3 + H-3 fit with jacobian fix
-	const double pars[6] 		= {0.568697,2.20877,0.415621,-0.118305,1.00649,0.995528};
-	const double pars_noOff[6] 	= {0.568697,2.20877,0.415621,0.0,1.00649,0.995528};
+	//const double pars[6] 		= {0.568697,2.20877,0.415621,-0.118305,1.00649,0.995528};
+	//const double pars_noOff[6] 	= {0.568697,2.20877,0.415621,0.0,1.00649,0.995528};
+	
+	// He-3 + H-3 fit with new framework fix
+	const double pars[6]		= {0.641236,2.34294,0.436482,-1.25748,1.015,0.989314};
+	const double pars_noOff[6]	= {0.641236,2.34294,0.436482,0,1.015,0.989314};
 
 	ofstream outfile;
 	outfile.open(argv[1]);
 
-	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
+	for( double x = 0.2 ; x <= 0.96 ; x+=0.2 ){
 		double Q2 = 14.*x;
 		double he3 = 0; double h3 = 0;
-		//cout << "\tx = " << x << "\n";
+		cout << "\tx = " << x << "\n";
 
 		calc_theo(x,Q2,he3,h3,pars,0.);			// Full EMC ratio
 		outfile << x << " " << Q2 << " " << he3 << " " << h3 << " ";
@@ -142,6 +145,7 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 	theo_he3 = 0; theo_h3 = 0;
 	double meanxalpha = 0;
 	double count = 0;
+	double baryon = 0, moment = 0;
 	for(	itK_n = test_n.begin(), itK_p = test_p.begin(); 
 			itK_n != test_n.end() && itK_p!= test_p.end(); itK_n++, itK_p++){
 
@@ -155,39 +159,47 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 
 				// Convert from Kaptari E to initial E:
 				double E_i = mHe3 - sqrt( pow( mHe3 - mP + E_m , 2 ) + p_m*p_m  );
-				// Define alpha and nu from (E_i,p_i):
-				double alpha = (E_i - p_m*cos(theta) )/mP;
+				// Define y and nu from (E_i,p_i):
+				double y = (E_i + p_m*cos(theta) )/mP;
 				double nu = (E_i*E_i - p_m*p_m - mP*mP)/(mP*mP); //unitless
 
 				// Grab spectral function values:
 				double sp_n = itE_n->second;
 				double sp_p = itE_p->second;
 
-				meanxalpha += x/alpha;
+				meanxalpha += x/y;
 				count++;
-
-				// Flag problematic kinematics:
-				if( x/alpha < 0 || x/alpha > 1 ){
-					continue;
-				}
 
 				//double jacobian = (1./alpha) *sin(theta)
 				//	* (mHe3 - mP + E_m)
 				//	/ (mP * sqrt(pow(mHe3-mP+E_m,2) + p_m*p_m) );
 				double jacobian = sin(theta); // p^2 dp dE already inside spectral function definition
 				double phi_int = 2*M_PI;
+				//double flux_fact = 1. + (p_m*cos(theta))/sqrt(p_m*p_m + mP*mP);
+				double flux_fact = 1. + (p_m*cos(theta))/E_i;
+				double mass_fact = mHe3/(mP*3.);
+
+				// Baryon and momentum sum rule are from y=(0,A), so no limit on y has to be < x
+				baryon += 1./A*(Z*sp_p + N*sp_n)*mass_fact*flux_fact*phi_int*jacobian*dTheta		;
+				moment += 1./A*(Z*sp_p + N*sp_n)*mass_fact*flux_fact*phi_int*jacobian*y*dTheta		;
+				// Flag problematic kinematics for the delta conservation (?):
+				if( y < x ) continue;
+				if( y > A) continue;
+				if( nu > 0. ) continue;
+
+
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-				theo_he3 += jacobian * phi_int * dTheta 
-					* ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
-						+ N*sp_n*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-					* F2p->Eval(x/alpha, Q2 )
+				theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+					* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
+						+ N*sp_n*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/y, Q2 )
 					* pars[4];
 				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-				theo_h3 += jacobian * phi_int * dTheta 
-					* ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
-						+ N*sp_p*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-					* F2p->Eval(x/alpha, Q2 )
+				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+					* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
+						+ N*sp_p*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/y, Q2 )
 					* pars[5];
 
 			}// end loop over theta
@@ -195,6 +207,7 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 	}// end loop over p miss
 	theo_he3 *= (1./A) / F2d->Eval(x,Q2);
 	theo_h3 *= (1./A) / F2d->Eval(x,Q2);
+	cout << baryon << " " << moment << "\n";
 
 	//cout << x << " " << meanxalpha/count << "\n";
 }
