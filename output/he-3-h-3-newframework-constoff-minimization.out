@@ -7,13 +7,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2141.47
+		552.399
 **********************************************
 
 ************ Fitting in progress *************
@@ -24,13 +25,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21496
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.569846
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2242.12
+		556.513
 **********************************************
 
 ************ Fitting in progress *************
@@ -41,13 +43,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21948
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.567548
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2043.45
+		548.362
 **********************************************
 
 ************ Fitting in progress *************
@@ -58,13 +61,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21699
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568812
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2151.42
+		552.807
 **********************************************
 
 ************ Fitting in progress *************
@@ -75,13 +79,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21744
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568582
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2131.55
+		551.992
 **********************************************
 
 ************ Fitting in progress *************
@@ -92,13 +97,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.864508
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20992
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2185.21
+		551.052
 **********************************************
 
 ************ Fitting in progress *************
@@ -109,13 +115,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.859988
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20762
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2098.36
+		553.752
 **********************************************
 
 ************ Fitting in progress *************
@@ -126,13 +133,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862474
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20903
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2145.81
+		552.089
 **********************************************
 
 ************ Fitting in progress *************
@@ -143,13 +151,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862022
-		np_c: 0.820479
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20851
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2137.13
+		552.71
 **********************************************
 
 ************ Fitting in progress *************
@@ -160,13 +169,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.822739
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.416769
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2318.92
+		573.589
 **********************************************
 
 ************ Fitting in progress *************
@@ -177,13 +187,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.818219
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.414471
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		1972.02
+		531.837
 **********************************************
 
 ************ Fitting in progress *************
@@ -194,13 +205,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820705
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.415735
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2158.85
+		554.49
 **********************************************
 
 ************ Fitting in progress *************
@@ -211,13 +223,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820253
-		np_d: 0.963992
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.415505
 		of_a: 0
+		N_he3: 1
+		N_h3: 1
 	Current chi2:
-		2124.16
+		550.315
 **********************************************
 
 ************ Fitting in progress *************
@@ -228,13 +241,86 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.966252
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0.00114865
+		N_he3: 1
+		N_h3: 1
+	Current chi2:
+		553.695
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: -0.00114865
+		N_he3: 1
+		N_h3: 1
+	Current chi2:
+		551.105
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0.000421434
+		N_he3: 1
+		N_h3: 1
+	Current chi2:
+		552.874
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: -0.000421434
+		N_he3: 1
+		N_h3: 1
+	Current chi2:
+		551.924
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1.00115
+		N_h3: 1
 	Current chi2:
-		2226.99
+		562.465
 **********************************************
 
 ************ Fitting in progress *************
@@ -245,13 +331,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.961732
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 0.998851
+		N_h3: 1
 	Current chi2:
-		2058.19
+		542.985
 **********************************************
 
 ************ Fitting in progress *************
@@ -262,13 +349,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.964218
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 1.00011
+		N_h3: 1
 	Current chi2:
-		2149.92
+		553.377
 **********************************************
 
 ************ Fitting in progress *************
@@ -279,13 +367,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963766
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
 		of_a: 0
+		N_he3: 0.999885
+		N_h3: 1
 	Current chi2:
-		2133.04
+		551.429
 **********************************************
 
 ************ Fitting in progress *************
@@ -296,13 +385,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
-		of_a: 0.0022601
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0
+		N_he3: 1
+		N_h3: 1.00115
 	Current chi2:
-		2144.63
+		570.24
 **********************************************
 
 ************ Fitting in progress *************
@@ -313,13 +403,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
-		of_a: -0.0022601
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0
+		N_he3: 1
+		N_h3: 0.998851
 	Current chi2:
-		2138.31
+		535.209
 **********************************************
 
 ************ Fitting in progress *************
@@ -330,13 +421,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
-		of_a: 0.00144702
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0
+		N_he3: 1
+		N_h3: 1.00011
 	Current chi2:
-		2143.49
+		554.154
 **********************************************
 
 ************ Fitting in progress *************
@@ -347,13 +439,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.21722
-		np_b: 0.862248
-		np_c: 0.820479
-		np_d: 0.963992
-		of_a: -0.00144702
+		np_a: 0.568697
+		np_b: 2.20877
+		np_c: 0.41562
+		of_a: 0
+		N_he3: 1
+		N_h3: 0.999885
 	Current chi2:
-		2139.45
+		550.651
 **********************************************
 
 ************ Fitting in progress *************
@@ -364,13 +457,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.30238
-		np_b: 0.707301
-		np_c: 0.771493
-		np_d: 0.879046
-		of_a: -2.86418
+		np_a: 0.507815
+		np_b: 2.51962
+		np_c: 0.377397
+		of_a: -0.758708
+		N_he3: 0.982827
+		N_h3: 0.969091
 	Current chi2:
-		20782.1
+		3027.86
 **********************************************
 
 ************ Fitting in progress *************
@@ -381,13 +475,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.71
+		225.135
 **********************************************
 
 ************ Fitting in progress *************
@@ -398,13 +493,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23791
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552725
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.612
+		225.038
 **********************************************
 
 ************ Fitting in progress *************
@@ -415,13 +511,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23795
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552639
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.808
+		225.233
 **********************************************
 
 ************ Fitting in progress *************
@@ -432,13 +529,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23792
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29071
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.651
+		225.179
 **********************************************
 
 ************ Fitting in progress *************
@@ -449,13 +547,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23794
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29037
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.769
+		225.091
 **********************************************
 
 ************ Fitting in progress *************
@@ -466,13 +565,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824592
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.40558
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.647
+		225.125
 **********************************************
 
 ************ Fitting in progress *************
@@ -483,13 +583,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824536
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.40555
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.773
+		225.146
 **********************************************
 
 ************ Fitting in progress *************
@@ -500,13 +601,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808588
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199312
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.554
+		225.17
 **********************************************
 
 ************ Fitting in progress *************
@@ -517,13 +619,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808543
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.19985
+		N_he3: 0.995483
+		N_h3: 0.991869
 	Current chi2:
-		197.867
+		225.101
 **********************************************
 
 ************ Fitting in progress *************
@@ -534,13 +637,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808573
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995497
+		N_h3: 0.991869
 	Current chi2:
-		197.655
+		225.122
 **********************************************
 
 ************ Fitting in progress *************
@@ -551,13 +655,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808557
-		np_d: 0.943333
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995468
+		N_h3: 0.991869
 	Current chi2:
-		197.765
+		225.149
 **********************************************
 
 ************ Fitting in progress *************
@@ -568,13 +673,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943356
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991884
 	Current chi2:
-		197.644
+		225.113
 **********************************************
 
 ************ Fitting in progress *************
@@ -585,13 +691,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.94331
-		of_a: -0.696582
+		np_a: 0.552682
+		np_b: 2.29054
+		np_c: 0.405565
+		of_a: -0.199581
+		N_he3: 0.995483
+		N_h3: 0.991854
 	Current chi2:
-		197.776
+		225.157
 **********************************************
 
 ************ Fitting in progress *************
@@ -602,13 +709,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943349
-		of_a: -0.696582
+		np_a: 0.582667
+		np_b: 2.25456
+		np_c: 0.403698
+		of_a: -0.339929
+		N_he3: 0.995735
+		N_h3: 0.992002
 	Current chi2:
-		197.664
+		145.685
 **********************************************
 
 ************ Fitting in progress *************
@@ -619,13 +727,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943317
-		of_a: -0.696582
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		197.756
+		81.5732
 **********************************************
 
 ************ Fitting in progress *************
@@ -636,13 +745,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.696141
+		np_a: 0.646271
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		197.698
+		81.594
 **********************************************
 
 ************ Fitting in progress *************
@@ -653,13 +763,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23793
-		np_b: 0.824564
-		np_c: 0.808565
-		np_d: 0.943333
-		of_a: -0.697023
+		np_a: 0.646217
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		197.722
+		81.5524
 **********************************************
 
 ************ Fitting in progress *************
@@ -670,13 +781,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23495
-		np_b: 0.832907
-		np_c: 0.809906
-		np_d: 0.944749
-		of_a: -0.804647
+		np_a: 0.646244
+		np_b: 2.17841
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		168.902
+		81.5438
 **********************************************
 
 ************ Fitting in progress *************
@@ -687,13 +799,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17816
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		164.51
+		81.6026
 **********************************************
 
 ************ Fitting in progress *************
@@ -704,13 +817,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23326
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399747
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		164.526
+		81.602
 **********************************************
 
 ************ Fitting in progress *************
@@ -721,13 +835,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23329
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399728
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		164.493
+		81.5444
 **********************************************
 
 ************ Fitting in progress *************
@@ -738,13 +853,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837633
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637337
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		164.52
+		81.5981
 **********************************************
 
 ************ Fitting in progress *************
@@ -755,13 +871,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837581
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637669
+		N_he3: 0.99627
+		N_h3: 0.992283
 	Current chi2:
-		164.5
+		81.5483
 **********************************************
 
 ************ Fitting in progress *************
@@ -772,13 +889,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810668
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.996279
+		N_h3: 0.992283
 	Current chi2:
-		164.528
+		81.5547
 **********************************************
 
 ************ Fitting in progress *************
@@ -789,13 +907,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810653
-		np_d: 0.945547
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.996261
+		N_h3: 0.992283
 	Current chi2:
-		164.492
+		81.5917
 **********************************************
 
 ************ Fitting in progress *************
@@ -806,13 +925,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945562
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992292
 	Current chi2:
-		164.528
+		81.6109
 **********************************************
 
 ************ Fitting in progress *************
@@ -823,13 +943,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945533
-		of_a: -0.865532
+		np_a: 0.646244
+		np_b: 2.17829
+		np_c: 0.399737
+		of_a: -0.637503
+		N_he3: 0.99627
+		N_h3: 0.992273
 	Current chi2:
-		164.491
+		81.5355
 **********************************************
 
 ************ Fitting in progress *************
@@ -840,13 +961,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.86511
+		np_a: 0.656189
+		np_b: 2.18216
+		np_c: 0.397017
+		of_a: -0.716568
+		N_he3: 1.00236
+		N_h3: 0.988039
 	Current chi2:
-		164.559
+		55.4478
 **********************************************
 
 ************ Fitting in progress *************
@@ -857,13 +979,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23328
-		np_b: 0.837607
-		np_c: 0.810661
-		np_d: 0.945547
-		of_a: -0.865955
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		164.461
+		54.2979
 **********************************************
 
 ************ Fitting in progress *************
@@ -874,13 +997,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23183
-		np_b: 0.843034
-		np_c: 0.811207
-		np_d: 0.945875
-		of_a: -1.06531
+		np_a: 0.658741
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		148.663
+		54.2986
 **********************************************
 
 ************ Fitting in progress *************
@@ -891,13 +1015,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22604
-		np_b: 0.864742
-		np_c: 0.813394
-		np_d: 0.947184
-		of_a: -1.86441
+		np_a: 0.658698
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		117.067
+		54.2972
 **********************************************
 
 ************ Fitting in progress *************
@@ -908,13 +1033,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18323
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.813
+		54.3001
 **********************************************
 
 ************ Fitting in progress *************
@@ -925,13 +1051,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22533
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18306
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.811
+		54.2957
 **********************************************
 
 ************ Fitting in progress *************
@@ -942,13 +1069,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22535
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396333
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.815
+		54.2967
 **********************************************
 
 ************ Fitting in progress *************
@@ -959,13 +1087,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867395
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396317
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.817
+		54.2991
 **********************************************
 
 ************ Fitting in progress *************
@@ -976,13 +1105,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867352
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736558
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.809
+		54.3008
 **********************************************
 
 ************ Fitting in progress *************
@@ -993,13 +1123,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813666
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736825
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.808
+		54.295
 **********************************************
 
 ************ Fitting in progress *************
@@ -1010,13 +1141,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813653
-		np_d: 0.947343
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986959
 	Current chi2:
-		116.819
+		54.2977
 **********************************************
 
 ************ Fitting in progress *************
@@ -1027,13 +1159,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947355
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.0039
+		N_h3: 0.986959
 	Current chi2:
-		116.801
+		54.2981
 **********************************************
 
 ************ Fitting in progress *************
@@ -1044,13 +1177,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947331
-		of_a: -1.96128
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986966
 	Current chi2:
-		116.825
+		54.2964
 **********************************************
 
 ************ Fitting in progress *************
@@ -1061,13 +1195,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96093
+		np_a: 0.65872
+		np_b: 2.18314
+		np_c: 0.396325
+		of_a: -0.736692
+		N_he3: 1.00391
+		N_h3: 0.986951
 	Current chi2:
-		116.813
+		54.2994
 **********************************************
 
 ************ Fitting in progress *************
@@ -1078,13 +1213,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22534
-		np_b: 0.867374
-		np_c: 0.813659
-		np_d: 0.947343
-		of_a: -1.96163
+		np_a: 0.66014
+		np_b: 2.17486
+		np_c: 0.396359
+		of_a: -0.764311
+		N_he3: 1.00424
+		N_h3: 0.987122
 	Current chi2:
-		116.814
+		53.6212
 **********************************************
 
 ************ Fitting in progress *************
@@ -1095,13 +1231,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22529
-		np_b: 0.865566
-		np_c: 0.814005
-		np_d: 0.949112
-		of_a: -1.98863
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		114.83
+		53.178
 **********************************************
 
 ************ Fitting in progress *************
@@ -1112,13 +1249,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.662582
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.779
+		53.182
 **********************************************
 
 ************ Fitting in progress *************
@@ -1129,13 +1267,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22515
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.662538
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.785
+		53.174
 **********************************************
 
 ************ Fitting in progress *************
@@ -1146,13 +1285,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22517
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16084
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.774
+		53.1784
 **********************************************
 
 ************ Fitting in progress *************
@@ -1163,13 +1303,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861076
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16067
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.783
+		53.1776
 **********************************************
 
 ************ Fitting in progress *************
@@ -1180,13 +1321,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861033
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396424
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.775
+		53.177
 **********************************************
 
 ************ Fitting in progress *************
@@ -1197,13 +1339,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814875
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396409
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.784
+		53.179
 **********************************************
 
 ************ Fitting in progress *************
@@ -1214,13 +1357,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814862
-		np_d: 0.953524
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.811218
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.774
+		53.1786
 **********************************************
 
 ************ Fitting in progress *************
@@ -1231,13 +1375,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953536
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.811482
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.782
+		53.1773
 **********************************************
 
 ************ Fitting in progress *************
@@ -1248,13 +1393,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953511
-		of_a: -2.05685
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00482
+		N_h3: 0.987401
 	Current chi2:
-		112.776
+		53.1761
 **********************************************
 
 ************ Fitting in progress *************
@@ -1265,13 +1411,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05651
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987401
 	Current chi2:
-		112.784
+		53.1799
 **********************************************
 
 ************ Fitting in progress *************
@@ -1282,13 +1429,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22516
-		np_b: 0.861054
-		np_c: 0.814868
-		np_d: 0.953524
-		of_a: -2.05719
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987408
 	Current chi2:
-		112.774
+		53.1782
 **********************************************
 
 ************ Fitting in progress *************
@@ -1299,13 +1447,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22529
-		np_b: 0.861013
-		np_c: 0.814881
-		np_d: 0.954134
-		of_a: -2.09757
+		np_a: 0.66256
+		np_b: 2.16076
+		np_c: 0.396416
+		of_a: -0.81135
+		N_he3: 1.00481
+		N_h3: 0.987393
 	Current chi2:
-		112.464
+		53.1778
 **********************************************
 
 ************ Fitting in progress *************
@@ -1316,13 +1465,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.658376
+		np_b: 2.14946
+		np_c: 0.397165
+		of_a: -0.835432
+		N_he3: 1.00553
+		N_h3: 0.987893
 	Current chi2:
-		112.455
+		52.0409
 **********************************************
 
 ************ Fitting in progress *************
@@ -1333,13 +1483,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22531
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.641638
+		np_b: 2.10427
+		np_c: 0.400162
+		of_a: -0.93176
+		N_he3: 1.00839
+		N_h3: 0.989864
 	Current chi2:
-		112.456
+		49.1224
 **********************************************
 
 ************ Fitting in progress *************
@@ -1350,13 +1501,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22533
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.455
+		48.6645
 **********************************************
 
 ************ Fitting in progress *************
@@ -1367,13 +1519,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861026
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.631294
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.454
+		48.6623
 **********************************************
 
 ************ Fitting in progress *************
@@ -1384,13 +1537,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.860983
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.631253
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.456
+		48.6666
 **********************************************
 
 ************ Fitting in progress *************
@@ -1401,13 +1555,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814889
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.631273
+		np_b: 2.07637
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.456
+		48.6661
 **********************************************
 
 ************ Fitting in progress *************
@@ -1418,13 +1573,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814877
-		np_d: 0.954256
-		of_a: -2.10571
+		np_a: 0.631273
+		np_b: 2.07621
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.455
+		48.6629
 **********************************************
 
 ************ Fitting in progress *************
@@ -1435,13 +1591,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954268
-		of_a: -2.10571
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402025
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.454
+		48.662
 **********************************************
 
 ************ Fitting in progress *************
@@ -1452,13 +1609,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954244
-		of_a: -2.10571
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.40201
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.456
+		48.6669
 **********************************************
 
 ************ Fitting in progress *************
@@ -1469,13 +1627,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10538
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991285
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.455
+		48.6625
 **********************************************
 
 ************ Fitting in progress *************
@@ -1486,13 +1645,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22532
-		np_b: 0.861005
-		np_c: 0.814883
-		np_d: 0.954256
-		of_a: -2.10605
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991537
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.456
+		48.6664
 **********************************************
 
 ************ Fitting in progress *************
@@ -1503,13 +1663,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22555
-		np_b: 0.861057
-		np_c: 0.814784
-		np_d: 0.954452
-		of_a: -2.09936
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01017
+		N_h3: 0.991084
 	Current chi2:
-		112.407
+		48.6626
 **********************************************
 
 ************ Fitting in progress *************
@@ -1520,13 +1681,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22648
-		np_b: 0.861267
-		np_c: 0.814386
-		np_d: 0.955234
-		of_a: -2.07396
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991084
 	Current chi2:
-		112.258
+		48.6663
 **********************************************
 
 ************ Fitting in progress *************
@@ -1537,13 +1699,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991091
 	Current chi2:
-		112.171
+		48.6627
 **********************************************
 
 ************ Fitting in progress *************
@@ -1554,13 +1717,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22791
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631273
+		np_b: 2.07629
+		np_c: 0.402017
+		of_a: -0.991411
+		N_he3: 1.01016
+		N_h3: 0.991077
 	Current chi2:
-		112.17
+		48.6662
 **********************************************
 
 ************ Fitting in progress *************
@@ -1571,13 +1735,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22793
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631828
+		np_b: 2.07497
+		np_c: 0.402225
+		of_a: -0.992542
+		N_he3: 1.01054
+		N_h3: 0.991146
 	Current chi2:
-		112.172
+		48.5331
 **********************************************
 
 ************ Fitting in progress *************
@@ -1588,13 +1753,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861614
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.167
+		48.5328
 **********************************************
 
 ************ Fitting in progress *************
@@ -1605,13 +1771,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861571
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631878
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.175
+		48.5329
 **********************************************
 
 ************ Fitting in progress *************
@@ -1622,13 +1789,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813775
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631838
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.17
+		48.5328
 **********************************************
 
 ************ Fitting in progress *************
@@ -1639,13 +1807,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813763
-		np_d: 0.956446
-		of_a: -2.03458
+		np_a: 0.631858
+		np_b: 2.07498
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.172
+		48.5322
 **********************************************
 
 ************ Fitting in progress *************
@@ -1656,13 +1825,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956458
-		of_a: -2.03458
+		np_a: 0.631858
+		np_b: 2.07482
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.169
+		48.5335
 **********************************************
 
 ************ Fitting in progress *************
@@ -1673,13 +1843,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956434
-		of_a: -2.03458
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402244
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.173
+		48.5325
 **********************************************
 
 ************ Fitting in progress *************
@@ -1690,13 +1861,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03424
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402229
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.17
+		48.5331
 **********************************************
 
 ************ Fitting in progress *************
@@ -1707,13 +1879,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.22792
-		np_b: 0.861593
-		np_c: 0.813769
-		np_d: 0.956446
-		of_a: -2.03491
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992478
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		112.172
+		48.5331
 **********************************************
 
 ************ Fitting in progress *************
@@ -1724,13 +1897,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.2297
-		np_b: 0.864839
-		np_c: 0.812958
-		np_d: 0.958664
-		of_a: -2.03755
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992727
+		N_he3: 1.01056
+		N_h3: 0.991149
 	Current chi2:
-		111.665
+		48.5325
 **********************************************
 
 ************ Fitting in progress *************
@@ -1741,13 +1915,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.23684
-		np_b: 0.877826
-		np_c: 0.809713
-		np_d: 0.967536
-		of_a: -2.04945
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01057
+		N_h3: 0.991149
 	Current chi2:
-		109.659
+		48.5328
 **********************************************
 
 ************ Fitting in progress *************
@@ -1758,13 +1933,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.25468
-		np_b: 0.910294
-		np_c: 0.801602
-		np_d: 0.989716
-		of_a: -2.07921
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01055
+		N_h3: 0.991149
 	Current chi2:
-		104.783
+		48.5328
 **********************************************
 
 ************ Fitting in progress *************
@@ -1775,13 +1951,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.3082
-		np_b: 1.0077
-		np_c: 0.777267
-		np_d: 1.05626
-		of_a: -2.16849
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991156
 	Current chi2:
-		91.7799
+		48.5327
 **********************************************
 
 ************ Fitting in progress *************
@@ -1792,13 +1969,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.46877
-		np_b: 1.2999
-		np_c: 0.704264
-		np_d: 1.25587
-		of_a: -2.43632
+		np_a: 0.631858
+		np_b: 2.0749
+		np_c: 0.402236
+		of_a: -0.992602
+		N_he3: 1.01056
+		N_h3: 0.991142
 	Current chi2:
-		98.5196
+		48.5329
 **********************************************
 
 ************ Fitting in progress *************
@@ -1809,13 +1987,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.631671
+		np_b: 2.07591
+		np_c: 0.402399
+		of_a: -0.994949
+		N_he3: 1.01064
+		N_h3: 0.991239
 	Current chi2:
-		82.1859
+		48.511
 **********************************************
 
 ************ Fitting in progress *************
@@ -1826,13 +2005,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37271
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.630926
+		np_b: 2.07994
+		np_c: 0.403049
+		of_a: -1.00433
+		N_he3: 1.01097
+		N_h3: 0.991599
 	Current chi2:
-		82.1686
+		48.4299
 **********************************************
 
 ************ Fitting in progress *************
@@ -1843,13 +2023,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37273
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.629061
+		np_b: 2.09001
+		np_c: 0.404676
+		of_a: -1.02779
+		N_he3: 1.01179
+		N_h3: 0.992499
 	Current chi2:
-		82.2033
+		48.2692
 **********************************************
 
 ************ Fitting in progress *************
@@ -1860,13 +2041,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.12512
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.1688
+		48.1311
 **********************************************
 
 ************ Fitting in progress *************
@@ -1877,13 +2059,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.12508
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.625011
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.203
+		48.1305
 **********************************************
 
 ************ Fitting in progress *************
@@ -1894,13 +2077,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.74794
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.624972
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.167
+		48.1317
 **********************************************
 
 ************ Fitting in progress *************
@@ -1911,13 +2095,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.74793
-		np_d: 1.13646
-		of_a: -2.2761
+		np_a: 0.624992
+		np_b: 2.11208
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.2048
+		48.1301
 **********************************************
 
 ************ Fitting in progress *************
@@ -1928,13 +2113,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13647
-		of_a: -2.2761
+		np_a: 0.624992
+		np_b: 2.11193
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.1692
+		48.1321
 **********************************************
 
 ************ Fitting in progress *************
@@ -1945,13 +2131,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13645
-		of_a: -2.2761
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408234
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.2026
+		48.1313
 **********************************************
 
 ************ Fitting in progress *************
@@ -1962,13 +2149,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.27581
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.40822
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.1705
+		48.1308
 **********************************************
 
 ************ Fitting in progress *************
@@ -1979,13 +2167,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.37272
-		np_b: 1.1251
-		np_c: 0.747935
-		np_d: 1.13646
-		of_a: -2.27639
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07889
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		82.2013
+		48.1315
 **********************************************
 
 ************ Fitting in progress *************
@@ -1996,13 +2185,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07914
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		73.3291
+		48.1307
 **********************************************
 
 ************ Fitting in progress *************
@@ -2013,13 +2203,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01358
+		N_h3: 0.994463
 	Current chi2:
-		73.3095
+		48.1311
 **********************************************
 
 ************ Fitting in progress *************
@@ -2030,13 +2221,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.45891
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994463
 	Current chi2:
-		73.3487
+		48.1311
 **********************************************
 
 ************ Fitting in progress *************
@@ -2047,13 +2239,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28971
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.99447
 	Current chi2:
-		73.3105
+		48.1318
 **********************************************
 
 ************ Fitting in progress *************
@@ -2064,13 +2257,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28967
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.624992
+		np_b: 2.11201
+		np_c: 0.408227
+		of_a: -1.07901
+		N_he3: 1.01357
+		N_h3: 0.994456
 	Current chi2:
-		73.3478
+		48.1304
 **********************************************
 
 ************ Fitting in progress *************
@@ -2081,13 +2275,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.709254
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.628173
+		np_b: 2.15204
+		np_c: 0.410362
+		of_a: -1.09211
+		N_he3: 1.01422
+		N_h3: 0.995354
 	Current chi2:
-		73.3087
+		47.7516
 **********************************************
 
 ************ Fitting in progress *************
@@ -2098,13 +2293,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.709245
-		np_d: 1.24818
-		of_a: -2.51244
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		73.3495
+		47.4897
 **********************************************
 
 ************ Fitting in progress *************
@@ -2115,13 +2311,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24819
-		of_a: -2.51244
+		np_a: 0.633454
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		73.3112
+		47.4904
 **********************************************
 
 ************ Fitting in progress *************
@@ -2132,13 +2329,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24817
-		of_a: -2.51244
+		np_a: 0.633414
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		73.347
+		47.489
 **********************************************
 
 ************ Fitting in progress *************
@@ -2149,13 +2347,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51216
+		np_a: 0.633434
+		np_b: 2.21831
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		73.3105
+		47.4888
 **********************************************
 
 ************ Fitting in progress *************
@@ -2166,13 +2365,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4589
-		np_b: 1.28969
-		np_c: 0.70925
-		np_d: 1.24818
-		of_a: -2.51271
+		np_a: 0.633434
+		np_b: 2.21815
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		73.3477
+		47.4906
 **********************************************
 
 ************ Fitting in progress *************
@@ -2183,13 +2383,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4611
-		np_b: 1.29898
-		np_c: 0.708625
-		np_d: 1.2537
-		of_a: -2.56902
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413898
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		68.0778
+		47.4904
 **********************************************
 
 ************ Fitting in progress *************
@@ -2200,13 +2401,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413884
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		67.8256
+		47.4891
 **********************************************
 
 ************ Fitting in progress *************
@@ -2217,13 +2419,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.46169
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11364
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		67.8253
+		47.4908
 **********************************************
 
 ************ Fitting in progress *************
@@ -2234,13 +2437,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.46171
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11389
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		67.8258
+		47.4887
 **********************************************
 
 ************ Fitting in progress *************
@@ -2251,13 +2455,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.30152
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01529
+		N_h3: 0.996828
 	Current chi2:
-		67.8243
+		47.4902
 **********************************************
 
 ************ Fitting in progress *************
@@ -2268,13 +2473,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.30148
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996828
 	Current chi2:
-		67.8268
+		47.4893
 **********************************************
 
 ************ Fitting in progress *************
@@ -2285,13 +2491,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.70846
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996835
 	Current chi2:
-		67.8257
+		47.4912
 **********************************************
 
 ************ Fitting in progress *************
@@ -2302,13 +2509,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708452
-		np_d: 1.2552
-		of_a: -2.58439
+		np_a: 0.633434
+		np_b: 2.21823
+		np_c: 0.413891
+		of_a: -1.11377
+		N_he3: 1.01528
+		N_h3: 0.996821
 	Current chi2:
-		67.8254
+		47.4882
 **********************************************
 
 ************ Fitting in progress *************
@@ -2319,13 +2527,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.25521
-		of_a: -2.58439
+		np_a: 0.634472
+		np_b: 2.22742
+		np_c: 0.414464
+		of_a: -1.12311
+		N_he3: 1.0155
+		N_h3: 0.996801
 	Current chi2:
-		67.826
+		47.433
 **********************************************
 
 ************ Fitting in progress *************
@@ -2336,13 +2545,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.25519
-		of_a: -2.58439
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		67.8251
+		47.4274
 **********************************************
 
 ************ Fitting in progress *************
@@ -2353,13 +2563,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58413
+		np_a: 0.634929
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		67.8239
+		47.4272
 **********************************************
 
 ************ Fitting in progress *************
@@ -2370,13 +2581,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4617
-		np_b: 1.3015
-		np_c: 0.708456
-		np_d: 1.2552
-		of_a: -2.58465
+		np_a: 0.634888
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		67.8273
+		47.4276
 **********************************************
 
 ************ Fitting in progress *************
@@ -2387,13 +2599,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.48383
-		np_b: 1.34344
-		np_c: 0.69839
-		np_d: 1.28217
-		of_a: -2.55691
+		np_a: 0.634909
+		np_b: 2.23138
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.8372
+		47.4278
 **********************************************
 
 ************ Fitting in progress *************
@@ -2404,13 +2617,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23121
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.8028
+		47.427
 **********************************************
 
 ************ Fitting in progress *************
@@ -2421,13 +2635,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.48949
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414712
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.8023
+		47.4265
 **********************************************
 
 ************ Fitting in progress *************
@@ -2438,13 +2653,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.48951
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414697
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.8034
+		47.4283
 **********************************************
 
 ************ Fitting in progress *************
@@ -2455,13 +2671,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35421
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12692
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.8027
+		47.427
 **********************************************
 
 ************ Fitting in progress *************
@@ -2472,13 +2689,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35418
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12717
+		N_he3: 1.01559
+		N_h3: 0.99679
 	Current chi2:
-		66.803
+		47.4278
 **********************************************
 
 ************ Fitting in progress *************
@@ -2489,13 +2707,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695815
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.0156
+		N_h3: 0.99679
 	Current chi2:
-		66.802
+		47.4275
 **********************************************
 
 ************ Fitting in progress *************
@@ -2506,13 +2725,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695807
-		np_d: 1.28908
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01558
+		N_h3: 0.99679
 	Current chi2:
-		66.8037
+		47.4273
 **********************************************
 
 ************ Fitting in progress *************
@@ -2523,13 +2743,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28909
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.996797
 	Current chi2:
-		66.8018
+		47.4276
 **********************************************
 
 ************ Fitting in progress *************
@@ -2540,13 +2761,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28907
-		of_a: -2.54987
+		np_a: 0.634909
+		np_b: 2.23129
+		np_c: 0.414704
+		of_a: -1.12704
+		N_he3: 1.01559
+		N_h3: 0.996783
 	Current chi2:
-		66.8039
+		47.4272
 **********************************************
 
 ************ Fitting in progress *************
@@ -2557,13 +2779,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.54961
+		np_a: 0.634858
+		np_b: 2.23902
+		np_c: 0.415515
+		of_a: -1.1342
+		N_he3: 1.01581
+		N_h3: 0.996955
 	Current chi2:
-		66.8024
+		47.4011
 **********************************************
 
 ************ Fitting in progress *************
@@ -2574,13 +2797,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.4895
-		np_b: 1.35419
-		np_c: 0.695811
-		np_d: 1.28908
-		of_a: -2.55013
+		np_a: 0.634656
+		np_b: 2.26992
+		np_c: 0.418756
+		of_a: -1.16285
+		N_he3: 1.01668
+		N_h3: 0.997616
 	Current chi2:
-		66.8033
+		47.3437
 **********************************************
 
 ************ Fitting in progress *************
@@ -2591,13 +2815,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7694
+		47.3418
 **********************************************
 
 ************ Fitting in progress *************
@@ -2608,13 +2833,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634627
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7693
+		47.3414
 **********************************************
 
 ************ Fitting in progress *************
@@ -2625,13 +2851,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49199
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634585
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7695
+		47.3423
 **********************************************
 
 ************ Fitting in progress *************
@@ -2642,13 +2869,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.3586
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27766
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7692
+		47.3423
 **********************************************
 
 ************ Fitting in progress *************
@@ -2659,13 +2887,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35856
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27749
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7696
+		47.3414
 **********************************************
 
 ************ Fitting in progress *************
@@ -2676,13 +2905,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694812
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419566
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7693
+		47.3413
 **********************************************
 
 ************ Fitting in progress *************
@@ -2693,13 +2923,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694804
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419551
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7695
+		47.3424
 **********************************************
 
 ************ Fitting in progress *************
@@ -2710,13 +2941,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29279
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16982
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7693
+		47.3418
 **********************************************
 
 ************ Fitting in progress *************
@@ -2727,13 +2959,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29277
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.17006
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7694
+		47.3419
 **********************************************
 
 ************ Fitting in progress *************
@@ -2744,13 +2977,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56496
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.0169
+		N_h3: 0.99778
 	Current chi2:
-		66.7693
+		47.3422
 **********************************************
 
 ************ Fitting in progress *************
@@ -2761,13 +2995,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56548
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.99778
 	Current chi2:
-		66.7695
+		47.3415
 **********************************************
 
 ************ Fitting in progress *************
@@ -2778,13 +3013,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.997787
 	Current chi2:
-		66.7694
+		47.3423
 **********************************************
 
 ************ Fitting in progress *************
@@ -2795,13 +3031,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.634606
+		np_b: 2.27757
+		np_c: 0.419559
+		of_a: -1.16994
+		N_he3: 1.01689
+		N_h3: 0.997773
 	Current chi2:
-		66.7693
+		47.3414
 **********************************************
 
 ************ Fitting in progress *************
@@ -2812,13 +3049,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49199
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.635187
+		np_b: 2.28306
+		np_c: 0.420703
+		of_a: -1.17467
+		N_he3: 1.0167
+		N_h3: 0.997149
 	Current chi2:
-		66.7695
+		47.2254
 **********************************************
 
 ************ Fitting in progress *************
@@ -2829,13 +3067,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.3586
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.637513
+		np_b: 2.30501
+		np_c: 0.425282
+		of_a: -1.19359
+		N_he3: 1.01595
+		N_h3: 0.994624
 	Current chi2:
-		66.7692
+		46.866
 **********************************************
 
 ************ Fitting in progress *************
@@ -2846,13 +3085,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35856
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7696
+		46.6486
 **********************************************
 
 ************ Fitting in progress *************
@@ -2863,13 +3103,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694812
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641276
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7693
+		46.6466
 **********************************************
 
 ************ Fitting in progress *************
@@ -2880,13 +3121,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694804
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641234
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7695
+		46.6507
 **********************************************
 
 ************ Fitting in progress *************
@@ -2897,13 +3139,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29279
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34042
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7693
+		46.651
 **********************************************
 
 ************ Fitting in progress *************
@@ -2914,13 +3157,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29277
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34025
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7694
+		46.6462
 **********************************************
 
 ************ Fitting in progress *************
@@ -2931,13 +3175,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56496
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.43266
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7693
+		46.6463
 **********************************************
 
 ************ Fitting in progress *************
@@ -2948,13 +3193,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56548
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432646
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7695
+		46.6509
 **********************************************
 
 ************ Fitting in progress *************
@@ -2965,13 +3211,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22394
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7693
+		46.6468
 **********************************************
 
 ************ Fitting in progress *************
@@ -2982,13 +3229,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22418
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7694
+		46.6504
 **********************************************
 
 ************ Fitting in progress *************
@@ -2999,13 +3247,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990559
 	Current chi2:
-		66.7693
+		46.6474
 **********************************************
 
 ************ Fitting in progress *************
@@ -3016,13 +3265,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01473
+		N_h3: 0.990559
 	Current chi2:
-		66.7694
+		46.6498
 **********************************************
 
 ************ Fitting in progress *************
@@ -3033,13 +3283,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694809
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990566
 	Current chi2:
-		66.7694
+		46.6468
 **********************************************
 
 ************ Fitting in progress *************
@@ -3050,13 +3301,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694807
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641255
+		np_b: 2.34034
+		np_c: 0.432653
+		of_a: -1.22406
+		N_he3: 1.01474
+		N_h3: 0.990552
 	Current chi2:
-		66.7694
+		46.6504
 **********************************************
 
 ************ Fitting in progress *************
@@ -3067,13 +3319,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641462
+		np_b: 2.35625
+		np_c: 0.436775
+		of_a: -1.26158
+		N_he3: 1.01532
+		N_h3: 0.989958
 	Current chi2:
-		66.7694
+		46.4893
 **********************************************
 
 ************ Fitting in progress *************
@@ -3084,13 +3337,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7694
+		46.4825
 **********************************************
 
 ************ Fitting in progress *************
@@ -3101,13 +3355,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56517
+		np_a: 0.641537
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7694
+		46.4823
 **********************************************
 
 ************ Fitting in progress *************
@@ -3118,13 +3373,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56528
+		np_a: 0.641494
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7694
+		46.4827
 **********************************************
 
 ************ Fitting in progress *************
@@ -3135,13 +3391,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.3586
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36043
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7691
+		46.4827
 **********************************************
 
 ************ Fitting in progress *************
@@ -3152,13 +3409,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.35858
-		np_c: 0.694812
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36025
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7692
+		46.4822
 **********************************************
 
 ************ Fitting in progress *************
@@ -3169,13 +3427,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29279
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437843
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7693
+		46.4824
 **********************************************
 
 ************ Fitting in progress *************
@@ -3186,13 +3445,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49197
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56496
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437829
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7692
+		46.4826
 **********************************************
 
 ************ Fitting in progress *************
@@ -3203,13 +3463,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.3586
-		np_c: 0.694812
-		np_d: 1.29278
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27112
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7692
+		46.4824
 **********************************************
 
 ************ Fitting in progress *************
@@ -3220,13 +3481,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.3586
-		np_c: 0.694808
-		np_d: 1.29279
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27136
+		N_he3: 1.01547
+		N_h3: 0.989804
 	Current chi2:
-		66.7692
+		46.4826
 **********************************************
 
 ************ Fitting in progress *************
@@ -3237,13 +3499,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.3586
-		np_c: 0.694808
-		np_d: 1.29278
-		of_a: -2.56496
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01548
+		N_h3: 0.989804
 	Current chi2:
-		66.7692
+		46.4824
 **********************************************
 
 ************ Fitting in progress *************
@@ -3254,13 +3517,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694812
-		np_d: 1.29279
-		of_a: -2.56522
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01546
+		N_h3: 0.989804
 	Current chi2:
-		66.7693
+		46.4826
 **********************************************
 
 ************ Fitting in progress *************
@@ -3271,13 +3535,14 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694812
-		np_d: 1.29278
-		of_a: -2.56496
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989811
 	Current chi2:
-		66.7692
+		46.4824
 **********************************************
 
 ************ Fitting in progress *************
@@ -3288,53 +3553,1041 @@ Minuit2Minimizer: Minimize with max-calls 100000 convergence for edm < 0.5 strat
 	on point 20
 ------------Finished calculations!------------
 	Current parameters:
-		np_a: -1.49198
-		np_b: 1.35858
-		np_c: 0.694808
-		np_d: 1.29279
-		of_a: -2.56496
+		np_a: 0.641516
+		np_b: 2.36034
+		np_c: 0.437836
+		of_a: -1.27124
+		N_he3: 1.01547
+		N_h3: 0.989797
 	Current chi2:
-		66.7693
+		46.4825
 **********************************************
 
-Info in <Minuit2>: matrix forced pos-def by adding to diagonal : padd = 0.00450612
-Info in <Minuit2>: MnHesse: matrix was forced pos. def. 
-Info in <Minuit2>: Minuit2Minimizer::Minimize : Covar was made pos def
-Minuit2Minimizer : Valid minimum - status = 1
-FVAL  = 66.7693728656075791
-Edm   = 0.000863036572413595007
-Nfcn  = 194
-np_a	  = -1.49198	 +/-  0.0249624
-np_b	  = 1.35858	 +/-  0.0291592
-np_c	  = 0.694808	 +/-  0.0116491
-np_d	  = 1.29278	 +/-  0.0187847
-of_a	  = -2.56522	 +/-  0.169879
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641304
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34331
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436472
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25876
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01505
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989347
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641304
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34331
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436472
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25876
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01505
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989347
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.64133
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641322
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34342
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34339
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436481
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436478
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25862
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25867
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989356
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989353
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641348
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.471
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.34349
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989354
+	Current chi2:
+		46.4708
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436487
+		of_a: -1.25864
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4708
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01507
+		N_h3: 0.989354
+	Current chi2:
+		46.4709
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25852
+		N_he3: 1.01506
+		N_h3: 0.989361
+	Current chi2:
+		46.4708
+**********************************************
+
+************ Fitting in progress *************
+	on point 0
+	on point 5
+	on point 10
+	on point 15
+	on point 20
+------------Finished calculations!------------
+	Current parameters:
+		np_a: 0.641326
+		np_b: 2.3434
+		np_c: 0.436479
+		of_a: -1.25864
+		N_he3: 1.01507
+		N_h3: 0.989361
+	Current chi2:
+		46.4709
+**********************************************
+
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = 46.4709173947719876
+Edm   = 0.00033982663024250976
+Nfcn  = 251
+np_a	  = 0.641326	 +/-  0.018839
+np_b	  = 2.3434	 +/-  0.200688
+np_c	  = 0.436479	 +/-  0.0243909
+of_a	  = -1.25864	 +/-  0.20906
+N_he3	  = 1.01506	 +/-  0.00594586
+N_h3	  = 0.989354	 +/-  0.00984934
+Printing covariance matrix:
+
+6x6 matrix is as follows
+
+     |      0    |      1    |      2    |      3    |      4    |
+----------------------------------------------------------------------
+   0 |  0.0003549    0.002343   0.0001853  -0.0007034  -1.222e-05 
+   1 |   0.002343     0.04028    0.004027    -0.02957   0.0005384 
+   2 |  0.0001853    0.004027   0.0005949   -0.004379   4.113e-05 
+   3 | -0.0007034    -0.02957   -0.004379     0.04371  -0.0007913 
+   4 | -1.222e-05   0.0005384   4.113e-05  -0.0007913   3.535e-05 
+   5 | -6.054e-05  -0.0001211  -0.0001087   0.0001879    3.58e-05 
+
+
+     |      5    |
+----------------------------------------------------------------------
+   0 | -6.054e-05 
+   1 | -0.0001211 
+   2 | -0.0001087 
+   3 |  0.0001879 
+   4 |   3.58e-05 
+   5 |  9.701e-05 
+
+
 
 ************ Fit covar results *************
 		 [ i*ndim + j ] 
-0.000623122
--0.000589967
--0.000125517
--0.000114511
-0.000178189
--0.000589967
-0.000850261
--4.10308e-05
-0.000384297
--0.00119925
--0.000125517
--4.10308e-05
-0.000135702
--0.000163334
-4.00065e-05
--0.000114511
-0.000384297
--0.000163334
-0.000352864
--0.000669942
-0.000178189
--0.00119925
-4.00065e-05
--0.000669942
-0.0288589
+0.000354908 1 0 0
+0.00234257 0.619602 0 1
+0.000185287 0.403235 0 2
+-0.000703388 -0.178594 0 3
+-1.22178e-05 -0.109074 0 4
+-6.05386e-05 -0.326263 0 5
+0.00234257 0.619602 1 0
+0.0402758 1 1 1
+0.00402679 0.82264 1 2
+-0.0295749 -0.704906 1 3
+0.000538361 0.451167 1 4
+-0.00012112 -0.0612754 1 5
+0.000185287 0.403235 2 0
+0.00402679 0.82264 2 1
+0.000594915 1 2 2
+-0.00437879 -0.858729 2 3
+4.11327e-05 0.283626 2 4
+-0.000108704 -0.452491 2 5
+-0.000703388 -0.178594 3 0
+-0.0295749 -0.704906 3 1
+-0.00437879 -0.858729 3 2
+0.043706 1 3 3
+-0.000791309 -0.636592 3 4
+0.000187929 0.0912677 3 5
+-1.22178e-05 -0.109074 4 0
+0.000538361 0.451167 4 1
+4.11327e-05 0.283626 4 2
+-0.000791309 -0.636592 4 3
+3.53532e-05 1 4 4
+3.57968e-05 0.611256 4 5
+-6.05386e-05 -0.326263 5 0
+-0.00012112 -0.0612754 5 1
+-0.000108704 -0.452491 5 2
+0.000187929 0.0912677 5 3
+3.57968e-05 0.611256 5 4
+9.70095e-05 1 5 5
 **********************************************
