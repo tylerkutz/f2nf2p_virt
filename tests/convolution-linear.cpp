@@ -37,7 +37,7 @@ vector<double> rho_p = kaptari_sf->getRhoProtons();
 vector<double> rho_n = kaptari_sf->getRhoNeutrons();
 
 // Functions with parameters to be minimized
-double offshell( double virt, double xB , double off_a );
+double offshell( double virt, double xB , double off_a , double off_b );
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to create theory point
@@ -59,11 +59,11 @@ int main(int argc, char ** argv){
 
 
 	// Resulting constant offshell fit from SF
-	const double pars_cstOff_SF[6] 			= {0.641326,2.3434,0.436479, -1.25864,1.01506,0.989354};
-	const double pars_cstOff_no_SF[6] 		= {0.641326,2.3434,0.436479,0,	      1.01506,0.989354};
+	const double pars_cstOff_SF[7] 			= {0.511178,2.13587,0.387633,1.90105,-4.33403,0.993903,1.00165};
+	const double pars_cstOff_no_SF[7] 		= {0.511178,2.13587,0.387633,0,	     0,	      0.993903,1.00165};
 	// Resulting constant offshell fit from rho
-	const double pars_cstOff_rho[6] 	= {0.670572,2.37343,0.413435,-0.866635,1.00928,0.990707};
-	const double pars_cstOff_no_rho[6] 	= {0.670572,2.37343,0.413435,0,        1.00928,0.990707};
+	const double pars_cstOff_rho[7] 	= {0.564145,2.23876,0.354459,1.39257,-3.46257,0.985203,1.00282};
+	const double pars_cstOff_no_rho[7] 	= {0.564145,2.23876,0.354459,0,      0,       0.985203,1.00282};
 
 
 	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
@@ -71,12 +71,6 @@ int main(int argc, char ** argv){
 		double he3 = 0; double h3 = 0;
 		cout << "\tx = " << x << "\n";
 		outfile << x << " " << Q2 << " ";
-
-		// Best fit n/p to our model and no offshell
-		//calc_theo(x,		Q2,	he3,	h3,	pars_onlyNP,	0.);
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo_rho(x,	Q2,	he3,	h3,	pars_onlyNP,	0.);
-		//outfile << he3 << " " << h3 << " ";
 
 		// Resulting constant offshell fit from SF and rho
 		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.);
@@ -89,8 +83,6 @@ int main(int argc, char ** argv){
 		outfile << he3 << " " << h3 << " ";
 		calc_theo_rho(x,	Q2,	he3,	h3,	pars_cstOff_no_rho,		0.);
 		outfile << he3 << " " << h3 << " ";
-		
-
 
 		// Now only allow for nucleons > 50 MeV/c in convolution with the spectral function
 		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.05);	// with offshell
@@ -127,48 +119,6 @@ int main(int argc, char ** argv){
 		outfile << he3 << " " << h3 << " ";
 		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	1.0);	// without offshell
 		outfile << he3 << " " << h3 << "\n";
-
-
-
-		//calc_theo(x,Q2,he3,h3,pars,0.);			// Full EMC ratio
-		//outfile << x << " " << Q2 << " " << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.);		// Only motion effects to EMC ratio
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.05);		// EMC contribution due to nucleons > 50 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.05);		// Only motion effects for > 50 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.100);		// EMC contribution due to nucleons > 100 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.100);	// Only motion effects for > 100 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.200);		// EMC contribution due to nucleons > 200 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.200);	// Only motion effects for > 200 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.400);		// EMC contribution due to nucleons > 400 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.400);	// Only motion effects for > 400 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.600);		// EMC contribution due to nucleons > 600 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.600);	// Only motion effects for > 600 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,0.800);		// EMC contribution due to nucleons > 800 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,0.800);	// Only motion effects for > 800 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-
-		//calc_theo(x,Q2,he3,h3,pars,1.000);		// EMC contribution due to nucleons > 1000 MeV/c
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo(x,Q2,he3,h3,pars_noOff,1.000);	// Only motion effects for > 1000 MeV/c
-		//outfile << he3 << " " << h3 << "\n";
 		
 	}
 	outfile.close();
@@ -176,8 +126,8 @@ int main(int argc, char ** argv){
 	return 0;
 }
 
-double offshell( double virt, double xB , double off_a  ){
-	return 1 + (off_a)*virt*virt;
+double offshell( double virt, double xB , double off_a , double off_b ){
+	return 1 + (off_a + off_b*xB)*virt*virt;
 }
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c ){
 	//return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
@@ -227,16 +177,16 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
 				theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
-						+ N*sp_n*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
-					* F2p->Eval(x/y, Q2 )
-					* pars[4];
-				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
-						+ N*sp_p*offshell(nu,x/y,pars[3])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* ( Z*sp_p*offshell(nu,x/y,pars[3],pars[4]) 
+						+ N*sp_n*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 					* F2p->Eval(x/y, Q2 )
 					* pars[5];
+				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
+					* ( Z*sp_n*offshell(nu,x/y,pars[3],pars[4]) 
+						+ N*sp_p*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* F2p->Eval(x/y, Q2 )
+					* pars[6];
 
 			}// end loop over theta
 		}// end loop over E miss
@@ -278,15 +228,15 @@ void calc_theo_rho( double x, double Q2, double &theo_he3, double &theo_h3 , con
 			counts++;
 
 			Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-			theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
-					+ N*sp_n*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
-				* F2p->Eval(x/alpha, Q2 )
-				* pars[4];
-			Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-			theo_h3 += ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
-					+ N*sp_p*offshell(nu,x/alpha,pars[3])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+			theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3],pars[4]) 
+					+ N*sp_n*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
 				* F2p->Eval(x/alpha, Q2 )
 				* pars[5];
+			Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
+			theo_h3 += ( Z*sp_n*offshell(nu,x/alpha,pars[3],pars[4]) 
+					+ N*sp_p*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+				* F2p->Eval(x/alpha, Q2 )
+				* pars[6];
 
 	}// end loop over i
 	//cout << x << " " << xalpha/counts << "\n";

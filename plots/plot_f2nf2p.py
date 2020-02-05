@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
 	print "Incorrect number of arguments. Please use: "
-	print "\tpython code.py [Min-He3+H3] [Min-H3] [Min-He3]"
+	print "\tpython code.py [dim of cov] [Min-He3+H3] [Min-H3] [Min-He3]"
 	exit(-1)
 
-COVs = []
-for fi in sys.argv:
+COVs=[]
+for fi in sys.argv[2:]:
 	if '.py' in fi: continue
 	if '.out' in fi: continue
 	cov = []
@@ -22,7 +22,7 @@ for fi in sys.argv:
 			val = float(line.strip().split(" ")[0])
 			arr.append(val)
 			ctr2+=1
-			if ctr2 == 7:
+			if ctr2 == int(sys.argv[1]):
 				ctr2 = 0
 				ctr1 += 1
 				cov.append(arr)
@@ -31,23 +31,18 @@ for fi in sys.argv:
 	COVs.append(cov)
 
 PARs = []
-for fi in sys.argv:
+for fi in sys.argv[2:]:
 	if '.py' in fi: continue
 	if '.txt' in fi: continue
 
 	np_a = 0;
 	np_b = 0;
 	np_c = 0;
-	#np_d = 0;
-	#of_a = 0;
 	with open(fi,"rb") as f:
 		for line in f:
 			if 'np_a' in line and "+/-" in line: np_a = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
-			#if 'np_d' in line and "+/-" in line: np_d = float(line.strip().split("=")[-1].split("+/-")[0])
-			#if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
-	#PARs.append( [ np_a, np_b, np_c, np_d, of_a ] )
 	PARs.append( [ np_a, np_b, np_c ] )
 
 def np_phen(x,pars):
@@ -80,19 +75,26 @@ x_axis = np.linspace(0.01,0.99,1000)
 cols = ['orange','red','blue']
 labs = ['He-3 and H-3','H-3','He-3']
 for i in range(len(PARs)):
-	plt.plot( x_axis , np_phen(x_axis,PARs[i]) , color=cols[i] , label=labs[i] ,linewidth=3)
-	plt.plot( x_axis , np_phen(x_axis,PARs[i]) - np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , linewidth=2 )
-	plt.plot( x_axis , np_phen(x_axis,PARs[i]) + np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , linewidth=2 )
 	plt.fill_between( x_axis, np_phen(x_axis,PARs[i]) - np_err(x_axis,PARs[i],COVs[i]) ,\
-				np_phen(x_axis,PARs[i]) + np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , alpha = 0.2 )
+				np_phen(x_axis,PARs[i]) + np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , alpha = 0.15 )
+for i in range(len(PARs)):
+	#plt.plot( x_axis , np_phen(x_axis,PARs[i]) , color=cols[i] , label=labs[i] ,linewidth=3)
+	plt.plot( x_axis , np_phen(x_axis,PARs[i]) - np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , linewidth=3 )
+	plt.plot( x_axis , np_phen(x_axis,PARs[i]) + np_err(x_axis,PARs[i],COVs[i]) , color=cols[i] , linewidth=3 )
 #og_pars = [-1.21721713,0.8622478,0.82047886,0.96399233]
 og_pars = [0.46500111,2.68513156,0.47170629]
 plt.plot(x_axis,np_phen(x_axis,og_pars),label='Init F2n/F2p',linestyle='--',color='black')
 plt.legend(numpoints=1,loc='best')
 
-plt.ylabel('F2n/F2p')
-plt.xlabel('x')
+plt.ylabel('F2n/F2p',fontsize=16)
+plt.xlabel('x',fontsize=16)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
 plt.ylim([0.2,1])
 plt.grid(True)
-plt.savefig('f2nf2p.pdf',bbox_inches="tight")
+plt.savefig('f2nf2p-constOff-LC.pdf',bbox_inches="tight")
+
+
+
+
 plt.show()
