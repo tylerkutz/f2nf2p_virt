@@ -44,8 +44,9 @@ if len(sys.argv) != 7:
 	exit(-1)
 
 COVs = []
-for fi in sys.argv[1:4]:
+for fi in sys.argv[1:]:
 	if '.py' in fi: continue
+	if '.out' in fi: continue
 	cov = []
 	ctr1 = 0
 	ctr2 = 0
@@ -54,7 +55,7 @@ for fi in sys.argv[1:4]:
 		for i in range(2): next(f)
 		for line in f:
 			if '*' in line: continue
-			val = float(line.strip())
+			val = float(line.strip().split(" ")[0])
 			arr.append(val)
 			ctr2+=1
 			if ctr2 == 7:
@@ -66,15 +67,16 @@ for fi in sys.argv[1:4]:
 	COVs.append(cov)
 
 PARs = []
-for fi in sys.argv[4:]:
+for fi in sys.argv[1:]:
 	if '.py' in fi: continue
+	if '.txt' in fi: continue
 	np_a = 0;
 	np_b = 0;
 	np_c = 0;
-	#of_p = 0;
-	#of_n = 0;
-	of_a0 = 0;
-	of_a1 = 0;
+	of_p = 0;
+	of_n = 0;
+	#of_a0 = 0;
+	#of_a1 = 0;
 	N_he3 = 0;
 	N_h3 = 0;
 	with open(fi,"rb") as f:
@@ -82,16 +84,16 @@ for fi in sys.argv[4:]:
 			if 'np_a' in line and "+/-" in line: np_a = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
-			#if 'of_p' in line and "+/-" in line: of_p = float(line.strip().split("=")[-1].split("+/-")[0])
-			#if 'of_n' in line and "+/-" in line: of_n = float(line.strip().split("=")[-1].split("+/-")[0])
-			if 'of_a0' in line and "+/-" in line: of_a0 = float(line.strip().split("=")[-1].split("+/-")[0])
-			if 'of_a1' in line and "+/-" in line: of_a1 = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'of_p' in line and "+/-" in line: of_p = float(line.strip().split("=")[-1].split("+/-")[0])
+			if 'of_n' in line and "+/-" in line: of_n = float(line.strip().split("=")[-1].split("+/-")[0])
+			#if 'of_a0' in line and "+/-" in line: of_a0 = float(line.strip().split("=")[-1].split("+/-")[0])
+			#if 'of_a1' in line and "+/-" in line: of_a1 = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_he3'in line and "+/-" in line: N_he3= float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_h3' in line and "+/-" in line: N_h3 = float(line.strip().split("=")[-1].split("+/-")[0])
 			
 	#PARs.append( [ np_a, np_b, np_c, np_d, of_a ] )
-	#PARs.append( [ np_a, np_b, np_c, of_p , of_n , N_he3 , N_h3 ] )
-	PARs.append( [ np_a, np_b, np_c, of_a0 , of_a1 , N_he3 , N_h3 ] )
+	PARs.append( [ np_a, np_b, np_c, of_p , of_n , N_he3 , N_h3 ] )
+	#PARs.append( [ np_a, np_b, np_c, of_a0 , of_a1 , N_he3 , N_h3 ] )
 
 
 widths = [[],[],[]]
@@ -111,16 +113,16 @@ for cov in COVs:
 	# cov[3] = of_p
 	# cov[4] = of_n
 	cov_c_c = cov[2][2]
-	#cov_c_o = cov[2][3] - cov[2][4]
-	#cov_o_c = cov[3][2] - cov[4][2]
-	#cov_o_o = cov[3][3] - cov[3][4] - cov[4][3] + cov[4][4]
-	cov_c_o = cov[2][3] 
-	cov_o_c = cov[3][2] 
-	cov_o_o = cov[3][3] 
+	cov_c_o = cov[2][3] - cov[2][4]
+	cov_o_c = cov[3][2] - cov[4][2]
+	cov_o_o = cov[3][3] - cov[3][4] - cov[4][3] + cov[4][4]
+	#cov_c_o = cov[2][3] 
+	#cov_o_c = cov[3][2] 
+	#cov_o_o = cov[3][3] 
 	new_cov = np.asarray([ [cov_c_c,cov_c_o],[cov_o_c,cov_o_o] ])	
 	x = PARs[ii][2]
-	#y = PARs[ii][3] - PARs[ii][4]
-	y = PARs[ii][3] 
+	y = PARs[ii][3] - PARs[ii][4]
+	#y = PARs[ii][3] 
 
 	[tmx,tmy,pear] = confidence_ellipse(new_cov, x , y , ax ,n_std=1, edgecolor=cols[ii],linewidth=3)
 	widths[ii].append(tmx)
@@ -140,15 +142,17 @@ for cov in COVs:
 	if y_max < (y) + Y	: y_max = (y) + Y*1.5
 	ii+=1
 
-#plt.scatter([0.378713],[0],color='black',s=30,zorder=99)
+plt.scatter([0.436479],[0],color='black',s=50,zorder=99,label='Isoscalar Result')
 ax.set_ylim(y_min,y_max)
 ax.set_xlim(x_min,x_max)
-ax.set_xlabel('F2n/F2p at x=1')
-#ax.set_ylabel('Proton offshell - Neutron offshell')
-ax.set_ylabel('Offshell a0')
+ax.set_xlabel('F2n/F2p at x=1',fontsize=16)
+ax.set_ylabel('Proton offshell - Neutron offshell',fontsize=16)
+ax.tick_params(axis='both', which='major', labelsize=16)
+#ax.set_ylabel('Offshell a0')
 plt.legend(numpoints=1,loc='best')
 plt.grid(True)
-plt.savefig("npx1_off_a0.pdf",bbox_inches="tight")
+plt.tight_layout()
+plt.savefig("npx1_off_diff.pdf",bbox_inches="tight")
 
 # Figure 2
 fig2, ax2 = plt.subplots(1, 1, figsize=(19, 11))
@@ -165,16 +169,16 @@ for cov in COVs:
 	# cov[3] = of_p
 	# cov[4] = of_n
 	cov_c_c = cov[2][2]
-	#cov_c_o = cov[2][3] + cov[2][4]
-	#cov_o_c = cov[3][2] + cov[4][2]
-	#cov_o_o = cov[3][3] + cov[3][4] + cov[4][3] + cov[4][4]
-	cov_c_o = cov[2][4]
-	cov_o_c = cov[4][2]
-	cov_o_o = cov[4][4]
+	cov_c_o = cov[2][3] + cov[2][4]
+	cov_o_c = cov[3][2] + cov[4][2]
+	cov_o_o = cov[3][3] + cov[3][4] + cov[4][3] + cov[4][4]
+	#cov_c_o = cov[2][4]
+	#cov_o_c = cov[4][2]
+	#cov_o_o = cov[4][4]
 	new_cov = np.asarray([ [cov_c_c,cov_c_o],[cov_o_c,cov_o_o] ])	
 	x = PARs[ii][2]
-	#y = PARs[ii][3] + PARs[ii][4]
-	y = PARs[ii][4]
+	y = PARs[ii][3] + PARs[ii][4]
+	#y = PARs[ii][4]
 
 	[tm,tm,pear] = confidence_ellipse(new_cov, x , y , ax2 ,n_std=1, edgecolor=cols[ii],linewidth=3)
 	[tm,tm,pear] = confidence_ellipse(new_cov, x , y , ax2 ,n_std=2, edgecolor=cols[ii],linewidth=3)
@@ -191,17 +195,20 @@ for cov in COVs:
 	if y_max < (y) + Y	: y_max = (y) + Y*1.5
 	ii+=1
 
-#plt.scatter([0.378713],[2.*0.415886],color='black',s=30,zorder=99)
+plt.scatter([0.436479],[2.*(-1.25864)],color='black',s=50,zorder=99,label='Isoscalar Result')
 ax2.set_ylim(y_min,y_max)
 ax2.set_xlim(x_min,x_max)
-ax2.set_xlabel('F2n/F2p at x=1')
-#ax2.set_ylabel('Proton offshell + Neutron offshell')
-ax2.set_ylabel('Offshell a1')
+ax2.set_xlabel('F2n/F2p at x=1',fontsize=16)
+ax2.set_ylabel('Proton offshell + Neutron offshell',fontsize=16)
+ax2.tick_params(axis='both', which='major', labelsize=16)
+#ax2.set_ylabel('Offshell a1')
 plt.legend(numpoints=1,loc='best')
 plt.grid(True)
-#plt.savefig("npx1_off_sum.pdf",bbox_inches="tight")
-plt.savefig("npx1_off_a1.pdf",bbox_inches="tight")
+plt.tight_layout()
+plt.savefig("npx1_off_sum.pdf",bbox_inches="tight")
+#plt.savefig("npx1_off_a1.pdf",bbox_inches="tight")
 
+'''
 # Figure 3
 def gaussian(x, mu, sig):
 	return 1./(np.sqrt(2.*np.pi)*sig)*np.exp(-np.power((x - mu)/sig, 2.)/2)
@@ -214,7 +221,7 @@ for i in range(3):
 plt.legend(numpoints=1,loc='best')
 plt.grid(True)
 plt.savefig("npx1_offLin_1d.pdf",bbox_inches="tight")
-
+'''
 
 #plt.savefig("npx1_off.pdf",bbox_inches="tight")
 plt.show()

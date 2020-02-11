@@ -44,8 +44,22 @@ def confidence_ellipse(cov,mean_x,mean_y, ax, n_std=3.0, facecolor='none', **kwa
 
 if len(sys.argv) != 8:
 	print "Incorrect number of arguments. Please use: "
-	print "\tpython code.py [dim of cov] [Cov-He3+H3] [Cov-H3] [Cov-He3] [Min-He3+H3] [Min-H3] [Min-He3]"
+	print "\tpython code.py [Plot opt] [Cov-He3+H3] [Cov-H3] [Cov-He3] [Min-He3+H3] [Min-H3] [Min-He3]"
+	print "\t [0 = const offshell]"
+	print "\t [1 = linear offshell]"
+	print "\t [2 = isodep offshell]"
 	exit(-1)
+
+DIM = -1
+OPT = -1
+if int(sys.argv[1]) == 0:
+	DIM = 6
+elif int(sys.argv[1]) == 1:
+	DIM = 7
+	OPT = 0
+elif int(sys.argv[1]) == 2:
+	DIM = 7
+	OPT = 1
 
 COVs = []
 for fi in sys.argv[2:]:
@@ -62,7 +76,7 @@ for fi in sys.argv[2:]:
 			val = float(line.strip().split(" ")[0])
 			arr.append(val)
 			ctr2+=1
-			if ctr2 == int(sys.argv[1]):
+			if ctr2 == DIM:
 				ctr2 = 0
 				ctr1 += 1
 				cov.append(arr)
@@ -86,23 +100,35 @@ for fi in sys.argv[2:]:
 			if 'np_a' in line and "+/-" in line: np_a = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_b' in line and "+/-" in line: np_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'np_c' in line and "+/-" in line: np_c = float(line.strip().split("=")[-1].split("+/-")[0])
-			if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
-			if 'of_b' in line and "+/-" in line: of_b = float(line.strip().split("=")[-1].split("+/-")[0])
+			if DIM == 6:
+				if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
+			elif DIM == 7 and OPT == 0:
+				if 'of_a' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
+				if 'of_b' in line and "+/-" in line: of_b = float(line.strip().split("=")[-1].split("+/-")[0])
+			elif DIM == 7 and OPT == 1:
+				if 'of_p' in line and "+/-" in line: of_a = float(line.strip().split("=")[-1].split("+/-")[0])
+				if 'of_n' in line and "+/-" in line: of_b = float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_he3'in line and "+/-" in line: N_he3= float(line.strip().split("=")[-1].split("+/-")[0])
 			if 'N_h3' in line and "+/-" in line: N_h3 = float(line.strip().split("=")[-1].split("+/-")[0])
-			
-	PARs.append( [ np_a, np_b, np_c, of_a , of_b , N_he3 , N_h3 ] )
-	#PARs.append( [ np_a, np_b, np_c, of_a ,  N_he3 , N_h3 ] )
+	
+	if DIM == 6:
+		PARs.append( [ np_a, np_b, np_c, of_a ,  N_he3 , N_h3 ] )
+	elif DIM == 7:
+		PARs.append( [ np_a, np_b, np_c, of_a , of_b , N_he3 , N_h3 ] )
 
 
-fig, axs = plt.subplots(int(sys.argv[1]), int(sys.argv[1]), figsize=(19, 18))
+fig, axs = plt.subplots(DIM, DIM, figsize=(19, 18))
 fig.subplots_adjust(hspace=.8)
 fig.subplots_adjust(wspace=.8)
 
 
 widths = [[],[],[]]
-labels = ["np_a","np_b","np_c","of_a","of_b","N_he3","N_h3"]
-#labels = ["np_a","np_b","np_c","of_a","N_he3","N_h3"]
+if DIM == 6:
+	labels = ["np_a","np_b","np_c","of_a","N_he3","N_h3"]
+elif DIM == 7 and OPT == 0:
+	labels = ["np_a","np_b","np_c","of_a","of_b","N_he3","N_h3"]
+elif DIM == 7 and OPT == 1:
+	labels = ["np_a","np_b","np_c","of_p","of_n","N_he3","N_h3"]
 ii = 0
 
 x_min = []
@@ -186,8 +212,12 @@ for i in range(len(COVs[0])):
 			axs[j][i].grid()
 
 
-
-plt.savefig("correlation-linearOff.pdf")
+if DIM == 6:
+	plt.savefig("correlation-const.pdf")
+elif DIM == 7 and OPT == 0:
+	plt.savefig("correlation-linearOff.pdf")
+elif DIM == 7 and OPT == 1:
+	plt.savefig("correlation-isoDep.pdf")
 
 
 # Do 1D plot of just the c parameter:
@@ -209,7 +239,13 @@ plt.ylabel('PDF',fontsize=16)
 plt.xlim([0,1])
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-plt.savefig('f2nf2p-linearOff-1D.pdf',bbox_inches="tight")
+plt.tight_layout()
+if DIM == 6:
+	plt.savefig("f2nf2p-const-1D.pdf")
+elif DIM == 7 and OPT == 0:
+	plt.savefig("f2nf2p-linearOff-1D.pdf")
+elif DIM == 7 and OPT == 1:
+	plt.savefig("f2nf2p-isoDep-1D.pdf")
 
 
 plt.show()

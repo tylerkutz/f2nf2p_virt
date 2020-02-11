@@ -92,7 +92,7 @@ plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 plt.ylim([0.2,1])
 plt.grid(True)
-plt.savefig('f2nf2p-constOff-LC.pdf',bbox_inches="tight")
+plt.savefig('f2nf2p-linear.pdf',bbox_inches="tight")
 
 
 
