@@ -7,6 +7,9 @@ target_link_libraries(sumrules ${ROOT_LIBRARIES} )
 add_executable(convolution-linear convolution-linear.cpp ../spec.cpp ../F2.cpp)
 target_link_libraries(convolution-linear ${ROOT_LIBRARIES} )
 
+add_executable(convolution-isodep convolution-isodep.cpp ../spec.cpp ../F2.cpp)
+target_link_libraries(convolution-isodep ${ROOT_LIBRARIES} )
+
 add_executable(convolution convolution.cpp ../spec.cpp ../F2.cpp)
 target_link_libraries(convolution ${ROOT_LIBRARIES} )
 

@@ -98,7 +98,6 @@ int main(int argc, char ** argv){
 	if( opt == 2 ){ cout << "Fixing H-3 norm, i.e. only doing He-3 fit\n"; min->FixVariable(5); }
 	
 	min->Minimize();
-
 	cerr << "Printing covariance matrix:\n";
 	TMatrixD covMatrix(min->NDim(), min->NDim() ); 
 	min->GetCovMatrix( covMatrix.GetMatrixArray() ); 
@@ -121,6 +120,7 @@ int main(int argc, char ** argv){
 	cerr 		<< "**********************************************" << endl;
 	outfile 	<< "**********************************************" << endl;
 	outfile.close();
+
 	delete min;
 
 	return 0;

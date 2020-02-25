@@ -8,5 +8,6 @@ project (f2nf2p)
 
 add_subdirectory(minimizers)
 add_subdirectory(tests)
+add_subdirectory(error)
 #add_subdirectory(alglib)
 

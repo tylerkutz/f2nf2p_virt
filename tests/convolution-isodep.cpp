@@ -37,7 +37,7 @@ vector<double> rho_p = kaptari_sf->getRhoProtons();
 vector<double> rho_n = kaptari_sf->getRhoNeutrons();
 
 // Functions with parameters to be minimized
-double offshell( double virt, double xB , double off_a , double off_b );
+double offshell( double virt, double xB , double off_a );
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to create theory point
@@ -59,78 +59,85 @@ int main(int argc, char ** argv){
 
 
 	// Resulting constant offshell fit from SF
-	const double pars_linOff_xshift_SF[7] 			= {0.511169,2.13985,0.388139,-0.269376,-4.33521,0.993955,1.0016};
-	const double pars_linOff_xshift_no_SF[7] 		= {0.511169,2.13985,0.388139,0,        0,       0.993955,1.0016};
+	const double pars_cstOff_SF[7] 			= {0.598628,1.68394,0.314105,-2.25666,3.82838,1.01553,0.991685};
+	const double pars_cstOff_no_SF[7] 		= {0.598628,1.68394,0.314105,0	     ,0      ,1.01553,0.991685};
+	const double pars_cstOff_SF_1[7] 			= {0.641326,2.3434,0.436479,-1.25864,-1.25864,1.01553,0.991685};
+	const double pars_cstOff_SF_2[7] 			= {0.598628,1.68394,0.314105,-1,10,1.01553,0.991685};
 	// Resulting constant offshell fit from rho
-	const double pars_linOff_xshift_rho[7] 			= {0.511169,2.13985,0.388139,-0.269376,-4.33521,0.993955,1.0016};
-	const double pars_linOff_xshift_no_rho[7] 		= {0.511169,2.13985,0.388139,0,        0,       0.993955,1.0016};
+	const double pars_cstOff_rho[7] 	= {0.666413,1.68687,0.278664,-1.48055,1.86425,1.01168,0.992428};
+	const double pars_cstOff_no_rho[7] 	= {0.666413,1.68687,0.278664,0	     ,0	     ,1.01168,0.992428};
 
 
 	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
 		double Q2 = 14.*x;
 		double he3 = 0; double h3 = 0;
-		cout << "\tx = " << x << "\n";
+		cout << x << " " << Q2 << " ";
 		outfile << x << " " << Q2 << " ";
 
 		// Resulting constant offshell fit from SF and rho
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.);
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.);
 		outfile << he3 << " " << h3 << " ";
-		calc_theo_rho(x,	Q2,	he3,	h3,	pars_linOff_xshift_rho,	0.);
+		cout << he3 << " " << h3 << " ";
+		calc_theo_rho(x,	Q2,	he3,	h3,	pars_cstOff_rho,	0.);
 		outfile << he3 << " " << h3 << " ";
 
 		// Resulting constant offshell fit from SF and rho with offshell FORCED to 0
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,		0.);
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,		0.);
 		outfile << he3 << " " << h3 << " ";
-		calc_theo_rho(x,	Q2,	he3,	h3,	pars_linOff_xshift_no_rho,		0.);
+		calc_theo_rho(x,	Q2,	he3,	h3,	pars_cstOff_no_rho,		0.);
 		outfile << he3 << " " << h3 << " ";
 
 		// Now only allow for nucleons > 50 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.05);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.05);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.05);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.05);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 100 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.1);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.1);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.1);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.1);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 200 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.2);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.2);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.2);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.2);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 400 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.4);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.4);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.4);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.4);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 500 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.5);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.5);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.5);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.5);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 750 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		0.75);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.75);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	0.75);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	0.75);	// without offshell
 		outfile << he3 << " " << h3 << " ";
 		// Now only allow for nucleons > 1000 MeV/c in convolution with the spectral function
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_SF,		1.0);	// with offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		1.0);	// with offshell
 		outfile << he3 << " " << h3 << " ";
-		calc_theo(x,		Q2,	he3,	h3,	pars_linOff_xshift_no_SF,	1.0);	// without offshell
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_no_SF,	1.0);	// without offshell
 		outfile << he3 << " " << h3 << "\n";
 		
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF_1,		0.);
+		cout << he3 << " " << h3 << " ";
+		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF_2,		0.);
+		cout << he3 << " " << h3 << "\n";
 	}
 	outfile.close();
 	
 	return 0;
 }
 
-double offshell( double virt, double xB , double off_a , double off_b ){
-	return 1 + (off_a + off_b*(xB-0.5))*virt*virt;
-	//return 1 + (off_b*(xB-off_a))*virt*virt;
+double offshell( double virt, double xB , double off_a ){
+	return 1 + (off_a)*virt*virt;
 }
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c ){
+	//return f2nf2p_a + f2nf2p_b*xB + f2nf2p_c*exp( f2nf2p_d*(1.-xB) );
 	return f2nf2p_a * pow( 1.-xB , f2nf2p_b ) + f2nf2p_c;	// -- simpler parameterization so that x=1 is just 1 parameter
 }
 
@@ -177,14 +184,14 @@ void calc_theo( double x, double Q2, double &theo_he3, double &theo_h3 , const d
 
 				Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
 				theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_p*offshell(nu,x/y,pars[3],pars[4]) 
-						+ N*sp_n*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
+						+ N*sp_n*offshell(nu,x/y,pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 					* F2p->Eval(x/y, Q2 )
 					* pars[5];
 				Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
 				theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-					* ( Z*sp_n*offshell(nu,x/y,pars[3],pars[4]) 
-						+ N*sp_p*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+					* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
+						+ N*sp_p*offshell(nu,x/y,pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 					* F2p->Eval(x/y, Q2 )
 					* pars[6];
 
@@ -228,13 +235,13 @@ void calc_theo_rho( double x, double Q2, double &theo_he3, double &theo_h3 , con
 			counts++;
 
 			Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
-			theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3],pars[4]) 
-					+ N*sp_n*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+			theo_he3 += ( Z*sp_p*offshell(nu,x/alpha,pars[3]) 
+					+ N*sp_n*offshell(nu,x/alpha,pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
 				* F2p->Eval(x/alpha, Q2 )
 				* pars[5];
 			Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
-			theo_h3 += ( Z*sp_n*offshell(nu,x/alpha,pars[3],pars[4]) 
-					+ N*sp_p*offshell(nu,x/alpha,pars[3],pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
+			theo_h3 += ( Z*sp_n*offshell(nu,x/alpha,pars[3]) 
+					+ N*sp_p*offshell(nu,x/alpha,pars[4])*f2nf2p(x/alpha,pars[0],pars[1],pars[2]) )
 				* F2p->Eval(x/alpha, Q2 )
 				* pars[6];
 

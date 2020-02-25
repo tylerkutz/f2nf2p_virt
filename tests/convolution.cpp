@@ -62,8 +62,8 @@ int main(int argc, char ** argv){
 	const double pars_cstOff_SF[6] 			= {0.641326,2.3434,0.436479, -1.25864,1.01506,0.989354};
 	const double pars_cstOff_no_SF[6] 		= {0.641326,2.3434,0.436479,0,	      1.01506,0.989354};
 	// Resulting constant offshell fit from rho
-	const double pars_cstOff_rho[6] 	= {0.670572,2.37343,0.413435,-0.866635,1.00928,0.990707};
-	const double pars_cstOff_no_rho[6] 	= {0.670572,2.37343,0.413435,0,        1.00928,0.990707};
+	const double pars_cstOff_rho[6] 		= {0.670572,2.37343,0.413435,-0.866635,1.00928,0.990707};
+	const double pars_cstOff_no_rho[6] 		= {0.670572,2.37343,0.413435,0,        1.00928,0.990707};
 
 
 	for( double x = 0.2 ; x <= 0.96 ; x+=0.01 ){
@@ -71,12 +71,6 @@ int main(int argc, char ** argv){
 		double he3 = 0; double h3 = 0;
 		cout << "\tx = " << x << "\n";
 		outfile << x << " " << Q2 << " ";
-
-		// Best fit n/p to our model and no offshell
-		//calc_theo(x,		Q2,	he3,	h3,	pars_onlyNP,	0.);
-		//outfile << he3 << " " << h3 << " ";
-		//calc_theo_rho(x,	Q2,	he3,	h3,	pars_onlyNP,	0.);
-		//outfile << he3 << " " << h3 << " ";
 
 		// Resulting constant offshell fit from SF and rho
 		calc_theo(x,		Q2,	he3,	h3,	pars_cstOff_SF,		0.);

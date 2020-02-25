@@ -50,7 +50,7 @@ map<double,double>::iterator itE_n;
 map<double,double>::iterator itE_p;
 
 // Functions with parameters to be minimized
-double offshell( double virt, double xB , double off_a , double off_b );
+double offshell( double virt, double xB , double off_a );
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c );
 
 // Function to minimize
@@ -68,25 +68,13 @@ int main(int argc, char ** argv){
 		return -1;
 	}
 
-	
-	// New parameters from new param of F2n/F2p
-	// 	OG
-	//const double np_a 	= 0.568697;
-	//const double np_b 	= 2.20877;
-	//const double np_c 	= 0.41562;
-	//const double of_a 	= 0.;
-	//const double of_b 	= 0.;
-	//const double Nhe3 	= 1.;
-	//const double Nh3 	= 1.;
-	// Parameters from H-3 fit of linear offshell and we will 
-	// fix offshell to see what happens to F2n/f2p and norm 
-	const double np_a 	= 0.568697;
-	const double np_b 	= 2.20877;
-	const double np_c 	= 0.41562;
-	const double of_a 	= -0.272737;
-	const double of_b 	= -0.521015;
-	const double Nhe3 	= 1.;
-	const double Nh3 	= 1.;
+	const double np_a	  = 0.598628	 ;
+	const double np_b	  = 1.68394	 ;
+	const double np_c	  = 0.314105	 ;
+	const double of_p	  = -2.25666	 ;
+	const double of_n	  = 3.82838	 ;
+	const double Nhe3	  = 1.01553	 ;
+	const double Nh3	  = 0.991685	 ;
 
 	readData();
 
@@ -94,52 +82,39 @@ int main(int argc, char ** argv){
 	min->SetMaxFunctionCalls(100000);
 	min->SetTolerance(5);
 	min->SetPrintLevel(1);
+	min->SetErrorDef(14.067);
 
-	ROOT::Math::Functor f(&Chi2,7);
+	ROOT::Math::Functor f(&Chi2,2);
 	min->SetFunction(f);
 	min->SetVariable(0,	"np_a",		np_a, 		0.1	);
 	min->SetVariable(1,	"np_b",		np_b, 		0.1	);
 	min->SetVariable(2,	"np_c",		np_c, 		0.1	);
-	min->SetVariable(3,	"of_a",		of_a, 		0.1	);
-	min->SetVariable(4,	"of_b",		of_b, 		0.1	);
+	min->SetVariable(3,	"of_p",		of_p, 		0.1	);
+	min->SetVariable(4,	"of_n",		of_n, 		0.1	);
 	min->SetVariable(5,	"N_he3",	Nhe3,   	0.1	);
 	min->SetVariable(6,	"N_h3",		Nh3,    	0.1	);
 	opt = atoi(argv[1]);
-	if( opt == 1 ){ cout << "Fixing He-3 norm, i.e. only doing H-3 fit\n"; min->FixVariable(5); }
-	if( opt == 2 ){ cout << "Fixing H-3 norm, i.e. only doing He-3 fit\n"; min->FixVariable(6); }
 	
 	min->Minimize();
 
-	cerr << "Printing covariance matrix:\n";
-	TMatrixD covMatrix(min->NDim(), min->NDim() ); 
-	min->GetCovMatrix( covMatrix.GetMatrixArray() ); 
-	covMatrix.Print();
-	cerr << "\n";
-
-	// Print covar result:
-	ofstream outfile;
-	outfile.open(argv[2]);
-	cerr 		<< "\n************ Fit covar results *************\n";
-	outfile 	<< "\n************ Fit covar results *************\n";
-	cerr 		<< "\t\t [ i*ndim + j ] \n";
-	outfile 	<< "\t\t [ i*ndim + j ] \n";
-	for( int i = 0 ; i < 7 ; i++ ){
-		for( int j = 0 ; j < 7 ; j++){
-			cerr << min->CovMatrix(i,j) << " " << min->Correlation(i,j) << " " << i << " " << j << "\n";
-			outfile << min->CovMatrix(i,j) << " " << min->Correlation(i,j) << " " << i << " " << j << "\n";
-		}
+	// Get contour
+	unsigned int numpts = 20;
+	double arrx[20] = {0.};
+	double arry[20] = {0.};
+	min->Contour(3,4,numpts,arrx,arry);
+	cout << numpts << "\n";
+	for( int i = 0 ; i < numpts ; i++){
+		cout << arrx[i] << " " << arry[i] << "\n";
 	}
-	cerr 		<< "**********************************************" << endl;
-	outfile 	<< "**********************************************" << endl;
-	outfile.close();
+
+
 	delete min;
 
 	return 0;
 }
 
-double offshell( double virt, double xB , double off_a , double off_b ){
-	//return 1 + (off_a + off_b*(xB-0.5))*virt*virt;
-	return 1 + (off_b*(xB-off_a))*virt*virt;
+double offshell( double virt, double xB , double off_a ){
+	return 1 + (off_a)*virt*virt;
 }
 double f2nf2p( double xB , double f2nf2p_a, double f2nf2p_b, double f2nf2p_c ){
 	return f2nf2p_a * pow( 1.-xB , f2nf2p_b ) + f2nf2p_c;
@@ -221,13 +196,13 @@ double Chi2( const double *pars ){
 
 					Z = 2; N = A-Z; // He3 - as it's He3 SF, keep p and n as they are for the SF
 					theo_he3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-						* ( Z*sp_p*offshell(nu,x/y,pars[3],pars[4]) 
-							+ N*sp_n*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+						* ( Z*sp_p*offshell(nu,x/y,pars[3]) 
+							+ N*sp_n*offshell(nu,x/y,pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 						* F2p->Eval(x/y, Q2 );
 					Z = 1; N = A-Z; // H3 - as it's He3 SF, swap p and n for only the SF
 					theo_h3 += jacobian * flux_fact * phi_int * mass_fact * dTheta 
-						* ( Z*sp_n*offshell(nu,x/y,pars[3],pars[4]) 
-							+ N*sp_p*offshell(nu,x/y,pars[3],pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
+						* ( Z*sp_n*offshell(nu,x/y,pars[3]) 
+							+ N*sp_p*offshell(nu,x/y,pars[4])*f2nf2p(x/y,pars[0],pars[1],pars[2]) )
 						* F2p->Eval(x/y, Q2 );
 
 				}// end loop over theta
@@ -254,8 +229,8 @@ double Chi2( const double *pars ){
 	cerr << "\t\tnp_a: " 	<< pars[0] << "\n";
 	cerr << "\t\tnp_b: " 	<< pars[1] << "\n";
 	cerr << "\t\tnp_c: " 	<< pars[2] << "\n";
-	cerr << "\t\tof_a: " 	<< pars[3] << "\n";
-	cerr << "\t\tof_b: " 	<< pars[4] << "\n";
+	cerr << "\t\tof_p: " 	<< pars[3] << "\n";
+	cerr << "\t\tof_n: " 	<< pars[4] << "\n";
 	cerr << "\t\tN_he3: "	<< pars[5] << "\n";
 	cerr << "\t\tN_h3: " 	<< pars[6] << "\n";
 	cerr << "\tCurrent chi2:\n";
