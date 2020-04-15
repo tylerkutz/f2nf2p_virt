@@ -47,7 +47,7 @@ f2nf2p_con = []
 f2nf2p_lin = []
 
 xs = []; F2ds_con = []; F2ds_lin = []
-with open("deut-conv-gt-2.txt","r") as f:
+with open("deuterium-data/deut-conv-gt.txt","r") as f:
     for line in f:
         parse = line.strip().split(" ")
         xs.append(      float(parse[0]) )

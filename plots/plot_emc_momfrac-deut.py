@@ -43,7 +43,7 @@ _750_noO_con = []
 _750_noO_lin = []
 
 xs = []; F2ds_con = []; F2ds_lin = []
-with open("deut-conv-lt.txt","r") as f:
+with open("deuterium-data/deut-conv-lt.txt","r") as f:
     for line in f:
         parse = line.strip().split(" ")
         xs.append(      float(parse[0]) )

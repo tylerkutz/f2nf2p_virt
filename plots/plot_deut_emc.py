@@ -8,21 +8,21 @@ def readTheory(x,F2d,filename):
             F2d.append(     float(parse[1]) )
 
 xs = []; F2ds_con = []; F2ds_lin = []
-with open("deut-conv.txt","r") as f:
+with open("deuterium-data/deut-conv-gt.txt","r") as f:
     for line in f:
         parse = line.strip().split(" ")
         xs.append(      float(parse[0]) )
         F2ds_con.append(     float(parse[1]) )
         F2ds_lin.append(    float(parse[2]) )
 x_prl = []; F2ds_L = []; F2ds_H = [];
-with open("deut-prl.txt","r") as f:
+with open("deuterium-data/deut-prl.txt","r") as f:
     for line in f:
         parse = line.strip().split(" ")
         x_prl.append(      float(parse[0]) )
         F2ds_L.append(  1./float(parse[1]) )
         F2ds_H.append(  1./float(parse[2]) )
 
-with open("deut-bonus.txt","r") as f:
+with open("deuterium-data/deut-bonus.txt","r") as f:
     data = f.readlines()
 x_bon   = np.asarray(data[0].strip().split(" "),dtype=float)
 f2d_bon = np.asarray(data[2].strip().split(" "),dtype=float)
@@ -34,9 +34,9 @@ e_bon = np.sqrt( np.power(e1_bon,2) + np.power(e2_bon,2) + np.power(e3_bon,2) )
 x_cj = [];  F2d_cj = []
 x_mst = []; F2d_mst = []
 x_kp = [];  F2d_kp = []
-readTheory(x_cj,F2d_cj,"deut-cj15.txt")
-readTheory(x_kp,F2d_kp,"deut-kp.txt")
-readTheory(x_mst,F2d_mst,"deut-mst.txt")
+readTheory(x_cj,F2d_cj,"deuterium-data/deut-cj15.txt")
+readTheory(x_kp,F2d_kp,"deuterium-data/deut-kp.txt")
+readTheory(x_mst,F2d_mst,"deuterium-data/deut-mst.txt")
 
 plt.errorbar(x_bon,f2d_bon,yerr=e_bon,linestyle='',color='black',marker='o')
 
@@ -58,7 +58,5 @@ plt.axhline(y=1,linestyle='--',color='black',linewidth=3)
 plt.tight_layout()
 plt.savefig('plot-f2d.pdf',bbox_inches='tight')
 
-
-plt.figure(9)
 
 plt.show()
