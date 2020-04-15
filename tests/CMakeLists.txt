@@ -13,5 +13,8 @@ target_link_libraries(convolution-isodep ${ROOT_LIBRARIES} )
 add_executable(convolution convolution.cpp ../spec.cpp ../F2.cpp)
 target_link_libraries(convolution ${ROOT_LIBRARIES} )
 
+add_executable(convolution-deuterium convolution-deuterium.cpp ../specdeut.cpp ../F2.cpp)
+target_link_libraries(convolution-deuterium ${ROOT_LIBRARIES} )
+
 add_executable(f2bound f2bound.cpp ../spec.cpp ../F2.cpp)
 target_link_libraries(f2bound ${ROOT_LIBRARIES} )

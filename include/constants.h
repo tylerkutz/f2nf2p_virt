@@ -1,6 +1,8 @@
 #ifndef __CONSTANTS_H__
 #define __CONSTANTS_H__
 
+const double GeVfm=0.1973;
+
 // nuclear masses
 const double mP = 0.9382721;
 const double mN = 0.9395654;
